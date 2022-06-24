@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using OfficeHouse.clases;
 
 namespace OfficeHouse
 {
@@ -32,6 +34,26 @@ namespace OfficeHouse
             this.Hide();
             MenuDevolucion frm = new MenuDevolucion();
             frm.Show();
+        }
+
+        private void btnpagar_Click(object sender, EventArgs e)
+        {
+            //ingreso en base de datos
+            MySqlConnection CDB = Cconexion.conex();
+            try
+            {
+                CDB.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.Connection = CDB;
+                comando.CommandText = ("Insert into devolucion(id_devolucion, fecha_devolucion, descripcion_devolucion, pago_libro_dañado, revision_gerencial) values('1', '"+fecha_devolucion+"', '"+""+"', '"+estado_libro+"', '"+""+"');");
+                comando.ExecuteNonQuery();
+                CDB.Close();
+                MessageBox.Show("Datos ingresados correctamente");
+            }
+            catch (Exception i)
+            {
+                MessageBox.Show(i.Message + i.StackTrace);
+            }
         }
     }
 }

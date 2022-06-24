@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using OfficeHouse.clases;
 
 namespace OfficeHouse
 {
@@ -32,6 +34,26 @@ namespace OfficeHouse
             this.Hide();
             MenuAlquiler frm = new MenuAlquiler();
             frm.Show();
+        }
+
+        private void btnpagar_Click(object sender, EventArgs e)
+        {
+            //ingreso en base de datos
+            MySqlConnection CDB = Cconexion.conex();
+            try
+            {
+                CDB.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.Connection = CDB;
+                comando.CommandText = ("Insert into alquiler(id_alquiler,cantidad, descripcion_alquiler, fecha_alquier, fecha_aprox_entrada ) values('1', '"+cantidad_alquiler+"', '"+""+"','"+fecha_alquier+"','"+fecha_aprox_entrada+"');");
+                comando.ExecuteNonQuery();
+                CDB.Close();
+                MessageBox.Show("Datos ingresados correctamente");
+            }
+            catch (Exception i)
+            {
+                MessageBox.Show(i.Message + i.StackTrace);
+            }
         }
     }
 }
