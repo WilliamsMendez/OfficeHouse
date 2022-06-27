@@ -70,6 +70,8 @@ namespace OfficeHouse
             // 
             // fechaingresolibro
             // 
+            this.fechaingresolibro.CustomFormat = "yyyy-MM-dd ";
+            this.fechaingresolibro.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.fechaingresolibro.Location = new System.Drawing.Point(468, 189);
             this.fechaingresolibro.Name = "fechaingresolibro";
             this.fechaingresolibro.Size = new System.Drawing.Size(201, 20);
@@ -379,7 +381,7 @@ namespace OfficeHouse
             // imgbarra
             // 
             this.imgbarra.Location = new System.Drawing.Point(572, 213);
-            this.imgbarra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.imgbarra.Margin = new System.Windows.Forms.Padding(2);
             this.imgbarra.Name = "imgbarra";
             this.imgbarra.Size = new System.Drawing.Size(208, 127);
             this.imgbarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -415,7 +417,7 @@ namespace OfficeHouse
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_codigo);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Registro_Libro";
             this.Text = "Registro_Libro";
             this.panel1.ResumeLayout(false);

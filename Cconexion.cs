@@ -26,11 +26,6 @@ namespace OfficeHouse.clases
                 MessageBox.Show(e.Message + e.StackTrace);
                 return null;
             }
-
-
-
         }
     }
-
-
 }

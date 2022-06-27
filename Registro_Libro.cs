@@ -48,7 +48,7 @@ namespace OfficeHouse
                 CDB.Open();
                 MySqlCommand comando = new MySqlCommand();
                 comando.Connection = CDB;
-                comando.CommandText = ("Insert into libro(id_libro, titulo_libro , autor_libro , Editorial , Categoria , precio, fecha_ingreso ) values(' 1 ', '" + Titulolibro + "','" + Autorlibro + "','" + Editoriallibro + "', '" + Categorialibro + "', '" + float.Parse(preciolibro.Text) + "', '" + this.fechaingresolibro.Value.Date + "');");
+                comando.CommandText = ("Insert into libro(id_libro, titulo_libro , autor_libro , Editorial , Categoria , precio, fecha_ingreso ) values('"+ txt_codigo.Text +" ', '" + Titulolibro.Text + "','" + Autorlibro.Text + "','" + Editoriallibro.Text + "', '" + Categorialibro.Text + "', '" + float.Parse(preciolibro.Text) + "', '" + fechaingresolibro.Value.ToString("yyy/MM/dd") + "');");
                 comando.ExecuteNonQuery();
                 CDB.Close();
                 MessageBox.Show("Datos ingresados correctamente");
