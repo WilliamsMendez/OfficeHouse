@@ -336,6 +336,7 @@ namespace OfficeHouse
             this.btnmodificar.TabIndex = 205;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = false;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
             // btneliminar
             // 

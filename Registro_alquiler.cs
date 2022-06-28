@@ -45,7 +45,7 @@ namespace OfficeHouse
                 CDB.Open();
                 MySqlCommand comando = new MySqlCommand();
                 comando.Connection = CDB;
-                comando.CommandText = ("Insert into alquiler(id_alquiler,cantidad, descripcion_alquiler, fecha_alquier, fecha_aprox_entrada ) values('1', '"+cantidad_alquiler+"', '"+""+"','"+fecha_alquier+"','"+fecha_aprox_entrada+"');");
+                comando.CommandText = ("Insert into alquiler(id_alquiler,cantidad, descripcion_alquiler, fecha_alquier, fecha_aprox_entrada ) values('"+codigo_alquiler.Text+"', '"+float.Parse(cantidad_alquiler.Text)+"', '"+""+"','"+fecha_alquier.Value.ToString("G")+"','"+dtp_fecha_aprox_entrega.Value.ToString("G")+"');");
                 comando.ExecuteNonQuery();
                 CDB.Close();
                 MessageBox.Show("Datos ingresados correctamente");

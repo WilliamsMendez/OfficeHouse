@@ -32,7 +32,6 @@ namespace OfficeHouse
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro_alquiler));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.fecha_aprox_entrada = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnpagar = new System.Windows.Forms.Button();
@@ -59,6 +58,7 @@ namespace OfficeHouse
             this.button3 = new System.Windows.Forms.Button();
             this.cantidad_alquiler = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtp_fecha_aprox_entrega = new System.Windows.Forms.DateTimePicker();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuario)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -87,15 +87,6 @@ namespace OfficeHouse
             this.label3.Size = new System.Drawing.Size(343, 36);
             this.label3.TabIndex = 119;
             this.label3.Text = "Registro de Alquiler";
-            // 
-            // fecha_aprox_entrada
-            // 
-            this.fecha_aprox_entrada.FormattingEnabled = true;
-            this.fecha_aprox_entrada.Location = new System.Drawing.Point(188, 205);
-            this.fecha_aprox_entrada.Name = "fecha_aprox_entrada";
-            this.fecha_aprox_entrada.Size = new System.Drawing.Size(184, 27);
-            this.fecha_aprox_entrada.TabIndex = 204;
-            this.fecha_aprox_entrada.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -154,7 +145,7 @@ namespace OfficeHouse
             // fecha_alquier
             // 
             this.fecha_alquier.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fecha_alquier.Location = new System.Drawing.Point(188, 162);
+            this.fecha_alquier.Location = new System.Drawing.Point(207, 162);
             this.fecha_alquier.Name = "fecha_alquier";
             this.fecha_alquier.Size = new System.Drawing.Size(184, 27);
             this.fecha_alquier.TabIndex = 199;
@@ -183,7 +174,7 @@ namespace OfficeHouse
             // 
             // autor_alquier
             // 
-            this.autor_alquier.Location = new System.Drawing.Point(188, 119);
+            this.autor_alquier.Location = new System.Drawing.Point(207, 119);
             this.autor_alquier.Name = "autor_alquier";
             this.autor_alquier.Size = new System.Drawing.Size(184, 27);
             this.autor_alquier.TabIndex = 196;
@@ -201,7 +192,7 @@ namespace OfficeHouse
             // 
             // titulo_alquiler
             // 
-            this.titulo_alquiler.Location = new System.Drawing.Point(188, 76);
+            this.titulo_alquiler.Location = new System.Drawing.Point(207, 76);
             this.titulo_alquiler.Name = "titulo_alquiler";
             this.titulo_alquiler.Size = new System.Drawing.Size(184, 27);
             this.titulo_alquiler.TabIndex = 194;
@@ -220,7 +211,7 @@ namespace OfficeHouse
             // codigo_alquiler
             // 
             this.codigo_alquiler.Enabled = false;
-            this.codigo_alquiler.Location = new System.Drawing.Point(188, 34);
+            this.codigo_alquiler.Location = new System.Drawing.Point(207, 34);
             this.codigo_alquiler.Name = "codigo_alquiler";
             this.codigo_alquiler.Size = new System.Drawing.Size(184, 27);
             this.codigo_alquiler.TabIndex = 192;
@@ -340,7 +331,7 @@ namespace OfficeHouse
             // 
             // cantidad_alquiler
             // 
-            this.cantidad_alquiler.Location = new System.Drawing.Point(188, 240);
+            this.cantidad_alquiler.Location = new System.Drawing.Point(207, 240);
             this.cantidad_alquiler.Name = "cantidad_alquiler";
             this.cantidad_alquiler.Size = new System.Drawing.Size(184, 27);
             this.cantidad_alquiler.TabIndex = 207;
@@ -348,12 +339,12 @@ namespace OfficeHouse
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.dtp_fecha_aprox_entrega);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cantidad_alquiler);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.codigo_alquiler);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.fecha_aprox_entrada);
             this.groupBox1.Controls.Add(this.titulo_alquiler);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.autor_alquier);
@@ -367,6 +358,14 @@ namespace OfficeHouse
             this.groupBox1.TabIndex = 208;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Aquiler";
+            // 
+            // dtp_fecha_aprox_entrega
+            // 
+            this.dtp_fecha_aprox_entrega.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_fecha_aprox_entrega.Location = new System.Drawing.Point(206, 202);
+            this.dtp_fecha_aprox_entrega.Name = "dtp_fecha_aprox_entrega";
+            this.dtp_fecha_aprox_entrega.Size = new System.Drawing.Size(184, 27);
+            this.dtp_fecha_aprox_entrega.TabIndex = 208;
             // 
             // Registro_alquiler
             // 
@@ -382,7 +381,7 @@ namespace OfficeHouse
             this.Controls.Add(this.btnatras);
             this.Controls.Add(this.dgv_Usuario);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Registro_alquiler";
             this.Text = "Registro_alquiler";
             this.Load += new System.EventHandler(this.Registro_alquiler_Load);
@@ -398,7 +397,6 @@ namespace OfficeHouse
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox fecha_aprox_entrada;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnpagar;
@@ -425,5 +423,6 @@ namespace OfficeHouse
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DateTimePicker dtp_fecha_aprox_entrega;
     }
 }

@@ -55,8 +55,6 @@ namespace OfficeHouse
             this.dtp_contratacion = new System.Windows.Forms.DateTimePicker();
             this.btnatras = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.contratacion_usuario = new System.Windows.Forms.TextBox();
-            this.nacimiento_usuario = new System.Windows.Forms.TextBox();
             this.dgv_Usuario = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -306,10 +304,10 @@ namespace OfficeHouse
             // 
             // dtp_nacimiento
             // 
-            this.dtp_nacimiento.CustomFormat = "MM-dd-yyyy";
+            this.dtp_nacimiento.CustomFormat = "yyyy-MM-dd";
             this.dtp_nacimiento.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_nacimiento.Location = new System.Drawing.Point(228, 135);
+            this.dtp_nacimiento.Location = new System.Drawing.Point(109, 135);
             this.dtp_nacimiento.Margin = new System.Windows.Forms.Padding(1);
             this.dtp_nacimiento.Name = "dtp_nacimiento";
             this.dtp_nacimiento.Size = new System.Drawing.Size(100, 21);
@@ -317,15 +315,16 @@ namespace OfficeHouse
             // 
             // dtp_contratacion
             // 
-            this.dtp_contratacion.CustomFormat = "MM-dd-yyyy";
+            this.dtp_contratacion.CustomFormat = "yyyy-MM-dd";
             this.dtp_contratacion.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_contratacion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_contratacion.Location = new System.Drawing.Point(228, 108);
+            this.dtp_contratacion.Location = new System.Drawing.Point(109, 111);
             this.dtp_contratacion.Margin = new System.Windows.Forms.Padding(1);
             this.dtp_contratacion.Name = "dtp_contratacion";
             this.dtp_contratacion.Size = new System.Drawing.Size(100, 21);
             this.dtp_contratacion.TabIndex = 146;
             this.dtp_contratacion.Value = new System.DateTime(2022, 2, 23, 12, 17, 19, 0);
+            this.dtp_contratacion.ValueChanged += new System.EventHandler(this.dtp_contratacion_ValueChanged);
             // 
             // btnatras
             // 
@@ -346,9 +345,7 @@ namespace OfficeHouse
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.contratacion_usuario);
             this.groupBox1.Controls.Add(this.btnatras);
-            this.groupBox1.Controls.Add(this.nacimiento_usuario);
             this.groupBox1.Controls.Add(this.dtp_contratacion);
             this.groupBox1.Controls.Add(this.dtp_nacimiento);
             this.groupBox1.Controls.Add(this.btnEliminar);
@@ -376,26 +373,6 @@ namespace OfficeHouse
             this.groupBox1.TabIndex = 133;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Usuario";
-            // 
-            // contratacion_usuario
-            // 
-            this.contratacion_usuario.BackColor = System.Drawing.SystemColors.Control;
-            this.contratacion_usuario.Enabled = false;
-            this.contratacion_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.contratacion_usuario.Location = new System.Drawing.Point(109, 111);
-            this.contratacion_usuario.Name = "contratacion_usuario";
-            this.contratacion_usuario.Size = new System.Drawing.Size(100, 20);
-            this.contratacion_usuario.TabIndex = 148;
-            // 
-            // nacimiento_usuario
-            // 
-            this.nacimiento_usuario.BackColor = System.Drawing.SystemColors.Control;
-            this.nacimiento_usuario.Enabled = false;
-            this.nacimiento_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.nacimiento_usuario.Location = new System.Drawing.Point(109, 137);
-            this.nacimiento_usuario.Name = "nacimiento_usuario";
-            this.nacimiento_usuario.Size = new System.Drawing.Size(100, 20);
-            this.nacimiento_usuario.TabIndex = 147;
             // 
             // dgv_Usuario
             // 
@@ -488,7 +465,7 @@ namespace OfficeHouse
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cerrarform);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Usuarios";
             this.Text = "Usuarios";
             this.panel2.ResumeLayout(false);
@@ -529,8 +506,6 @@ namespace OfficeHouse
         private System.Windows.Forms.Button btnatras;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgv_Usuario;
-        private System.Windows.Forms.TextBox contratacion_usuario;
-        private System.Windows.Forms.TextBox nacimiento_usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Autor;

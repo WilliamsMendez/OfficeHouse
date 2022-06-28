@@ -42,7 +42,7 @@ namespace OfficeHouse
                 CDB.Open();
                 MySqlCommand comando = new MySqlCommand();
                 comando.Connection = CDB;
-                comando.CommandText = ("Insert into tarjetas(numero_tarjeta, nombre_propietario, fecha_vencimiento, cvv ) values('"+float.Parse(numero_tarjeta.Text) +"', '"+nombre_propietario_tarjeta+"' , '"+fecha_vencimiento_tarjeta+"' , '"+float.Parse(numero_atras_tarjeta.Text) +"');");
+                comando.CommandText = ("Insert into tarjetas(numero_tarjeta, nombre_propietario, fecha_vencimiento, cvv ) values('"+float.Parse(numero_tarjeta.Text) +"', '"+nombre_propietario_tarjeta.Text+"' , '"+fecha_vencimiento_tarjeta.Value.ToString("G")+"' , '"+float.Parse(numero_atras_tarjeta.Text) +"');");
                 comando.ExecuteNonQuery();
                 CDB.Close();
                 MessageBox.Show("Datos ingresados correctamente");
