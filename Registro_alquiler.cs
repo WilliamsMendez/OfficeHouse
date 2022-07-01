@@ -18,15 +18,23 @@ namespace OfficeHouse
         {
             InitializeComponent();
         }
+        MySqlConnection CDB = Cconexion.conex();
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        public void llenartabla()
         {
-
+            string consulta = "select * from alquiler";
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
+            DataTable dt = new DataTable();
+            adaptador.Fill(dt);
+            dgv_alquiler.DataSource = dt;
         }
-
         private void Registro_alquiler_Load(object sender, EventArgs e)
         {
-
+            string consulta = "select * from alquiler";
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
+            DataTable dt = new DataTable();
+            adaptador.Fill(dt);
+            dgv_alquiler.DataSource = dt;
         }
 
         private void btnatras_Click(object sender, EventArgs e)
@@ -36,19 +44,66 @@ namespace OfficeHouse
             frm.Show();
         }
 
-        private void btnpagar_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            //ingreso en base de datos
-            MySqlConnection CDB = Cconexion.conex();
+            CDB.Open();
+
+            string consulta = "delete from alquiler where id_alquiler=" + codigo_alquiler.Text + "";
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
+            MySqlCommand comando = new MySqlCommand(consulta, CDB);
+            comando.ExecuteNonQuery();
+            llenartabla();
+            CDB.Close();
+            MessageBox.Show("Datos eliminados correctamente");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_libro_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            codigo_alquiler.Text = dgv_alquiler.SelectedCells[0].Value.ToString();
+            cantidad_alquiler.Text = dgv_alquiler.SelectedCells[1].Value.ToString();
+            fechalquiler.Text = dgv_alquiler.SelectedCells[2].Value.ToString();
+            fechaaprox.Text = dgv_alquiler.SelectedCells[3].Value.ToString();
+                      
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
             try
             {
                 CDB.Open();
                 MySqlCommand comando = new MySqlCommand();
                 comando.Connection = CDB;
-                comando.CommandText = ("Insert into alquiler(id_alquiler,cantidad, descripcion_alquiler, fecha_alquier, fecha_aprox_entrada ) values('"+codigo_alquiler.Text+"', '"+float.Parse(cantidad_alquiler.Text)+"', '"+""+"','"+fecha_alquier.Value.ToString("G")+"','"+dtp_fecha_aprox_entrega.Value.ToString("G")+"');");
+                comando.CommandText = ("Insert into alquiler(id_alquiler, cantidad, fecha_alquiler, fecha_aprox_entrega ) values('" + codigo_alquiler.Text + "', '" + float.Parse(cantidad_alquiler.Text) + "','" + fechalquiler.Value.ToString("yyyy/MM/dd") + "','" + fechaaprox.Value.ToString("yyyy/MM/dd") + "');");
                 comando.ExecuteNonQuery();
                 CDB.Close();
+                llenartabla();
                 MessageBox.Show("Datos ingresados correctamente");
+            }
+            catch (Exception i)
+            {
+                MessageBox.Show(i.Message + i.StackTrace);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CDB.Open();
+
+                MySqlCommand comando = new MySqlCommand();
+                comando.Connection = CDB;
+                comando.CommandText = ("UPDATE alquiler SET id_alquiler='" + codigo_alquiler.Text + "',cantidad='"+ float.Parse(cantidad_alquiler.Text)+ "',fecha_alquiler='" + fechalquiler.Value.ToString("yyyy/MM/dd") + "',fecha_aprox_entrega='" + fechaaprox.Value.ToString("yyyy/MM/dd") + "' WHERE id_alquiler='" + codigo_alquiler.Text + "'");
+                comando.ExecuteNonQuery();
+                llenartabla();
+                MessageBox.Show("Datos modificados correctamente");
+
+                CDB.Close();
             }
             catch (Exception i)
             {

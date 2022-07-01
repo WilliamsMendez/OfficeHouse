@@ -18,7 +18,16 @@ namespace OfficeHouse
         {
             InitializeComponent();
         }
-
+        MySqlConnection CDB = Cconexion.conex();
+       
+        public void llenartabla()
+        {
+            string consulta = "select * from  empleado";
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
+            DataTable dt = new DataTable();
+            adaptador.Fill(dt);
+            dgv_libro.DataSource = dt;
+        }
         private void btnatras_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -34,14 +43,15 @@ namespace OfficeHouse
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             //ingreso en base de datos
-            MySqlConnection CDB = Cconexion.conex();
+            
             try
             {
                 CDB.Open();
                 MySqlCommand comando = new MySqlCommand();
                 comando.Connection = CDB;
-                comando.CommandText = ("Insert into empleado(id_empleado, nombre_empleado, apellido_empleado, usuario_empleado, clave_empleado, fecha_contrato, fecha_nacimiento_empleado, puesto_empleado  ) values('1', '"+nombre_usuario.Text+"', '"+apellido_usuario.Text+"', '"+usuario_usuario.Text+"', '"+clave_usuario.Text+"', '"+dtp_contratacion.Value.ToString("G")+"','"+dtp_nacimiento.Value.ToString("G")+"', '"+puesto_usuario.Text+"');");
+                comando.CommandText = ("Insert into empleado(id_empleado, nombre_empleado, apellido_empleado, usuario_empleado, clave_empleado, fecha_contratacion, fecha_nacimiento_empleado, puesto_empleado  ) values('"+ codigo_usuario.Text+"', '"+nombre_usuario.Text+"', '"+apellido_usuario.Text+"', '"+usuario_usuario.Text+"', '"+clave_usuario.Text+"', '"+dtp_contratacion.Value.ToString("yyyy/MM/dd")+"','"+dtp_nacimiento.Value.ToString("yyyy/MM/dd")+"', '"+puesto_usuario.Text+"');");
                 comando.ExecuteNonQuery();
+                llenartabla();
                 CDB.Close();
                 MessageBox.Show("Datos ingresados correctamente");
             }
@@ -54,6 +64,63 @@ namespace OfficeHouse
         private void dtp_contratacion_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Usuarios_Load(object sender, EventArgs e)
+        {
+            string consulta = "select * from empleado";
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
+            DataTable dt = new DataTable();
+            adaptador.Fill(dt);
+            dgv_libro.DataSource = dt;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            CDB.Open();
+
+            string consulta = "delete from empleado where id_empleado=" + codigo_usuario.Text + "";
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
+            MySqlCommand comando = new MySqlCommand(consulta, CDB);
+            comando.ExecuteNonQuery();
+            llenartabla();
+            CDB.Close();
+            MessageBox.Show("Datos eliminados correctamente");
+        }
+
+        private void btnmodificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CDB.Open();
+
+                MySqlCommand comando = new MySqlCommand();
+                comando.Connection = CDB;
+                comando.CommandText = ("UPDATE empleado SET id_empleado='" + codigo_usuario.Text + "',nombre_empleado='" + nombre_usuario.Text + "',apellido_empleado='" + apellido_usuario.Text + "', usuario_empleado='" + usuario_usuario.Text + "',clave_empleado='" + clave_usuario.Text + "',fecha_contratacion='" + dtp_contratacion.Value.ToString("yyyy/MM/dd") + "',fecha_nacimiento_empleado='" + dtp_nacimiento.Value.ToString("yyyy/MM/dd") + "',puesto_empleado='" + puesto_usuario.Text + "'WHERE id_empleado='" + codigo_usuario.Text + "'");
+                comando.ExecuteNonQuery();
+                llenartabla();
+                MessageBox.Show("Datos modificados correctamente");
+
+                CDB.Close();
+            }
+            catch (Exception i)
+            {
+                MessageBox.Show(i.Message + i.StackTrace);
+            }
+        }
+
+        private void dgv_libro_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            codigo_usuario.Text = dgv_libro.SelectedCells[0].Value.ToString();
+            nombre_usuario.Text = dgv_libro.SelectedCells[1].Value.ToString();
+            apellido_usuario.Text = dgv_libro.SelectedCells[2].Value.ToString();
+            usuario_usuario.Text = dgv_libro.SelectedCells[3].Value.ToString();
+            clave_usuario.Text = dgv_libro.SelectedCells[4].Value.ToString();
+            //regitradoxtal.SelectedIndex = dgv_libro.SelectedCells[6].Value.ToString();
+            dtp_contratacion.Value = Convert.ToDateTime(dgv_libro.SelectedCells[5].Value.ToString());
+            dtp_nacimiento.Value = Convert.ToDateTime(dgv_libro.SelectedCells[6].Value.ToString());
+            puesto_usuario.Text = dgv_libro.SelectedCells[7].Value.ToString();
+            
         }
     }
 }

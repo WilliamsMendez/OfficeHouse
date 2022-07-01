@@ -132,13 +132,6 @@
         dfgAAeuwbL8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnpagar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAJYAAADICAMAAAA9W+hXAAAABGdBTUEAALGPC/xhBQAAAANQTFRF+a0J
-        fxoPhQAAADRJREFUeF7twTEBAAAAwqD1T+1rCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE4N
-        dfgAAeuwbL8AAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btnatras.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAJYAAADICAMAAAA9W+hXAAAABGdBTUEAALGPC/xhBQAAAANQTFRF+a0J
@@ -146,31 +139,14 @@
         dfgAAeuwbL8AAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="Codigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Titulo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Autor.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Categoría.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Fecha_Alquiler.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Fechaentrega.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Cantidad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Precio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="button3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAJYAAADICAMAAAA9W+hXAAAABGdBTUEAALGPC/xhBQAAAANQTFRF+a0J
+        fxoPhQAAADRJREFUeF7twTEBAAAAwqD1T+1rCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE4N
+        dfgAAeuwbL8AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnRegistrar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAJYAAADICAMAAAA9W+hXAAAABGdBTUEAALGPC/xhBQAAAANQTFRF+a0J
         fxoPhQAAADRJREFUeF7twTEBAAAAwqD1T+1rCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE4N

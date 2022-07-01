@@ -90,12 +90,6 @@
     <Compile Include="Datos_Tarjeta.Designer.cs">
       <DependentUpon>Datos_Tarjeta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Error.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Error.Designer.cs">
-      <DependentUpon>Error.cs</DependentUpon>
-    </Compile>
     <Compile Include="Historial_Alquiler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,12 +150,6 @@
     <Compile Include="Menu_Registro.Designer.cs">
       <DependentUpon>Menu_Registro.cs</DependentUpon>
     </Compile>
-    <Compile Include="registroexitoso.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="registroexitoso.Designer.cs">
-      <DependentUpon>registroexitoso.cs</DependentUpon>
-    </Compile>
     <Compile Include="Pagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,9 +194,6 @@
     <EmbeddedResource Include="Datos_Tarjeta.resx">
       <DependentUpon>Datos_Tarjeta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Error.resx">
-      <DependentUpon>Error.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Historial_Alquiler.resx">
       <DependentUpon>Historial_Alquiler.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,9 +223,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_Registro.resx">
       <DependentUpon>Menu_Registro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="registroexitoso.resx">
-      <DependentUpon>registroexitoso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pagos.resx">
       <DependentUpon>Pagos.cs</DependentUpon>

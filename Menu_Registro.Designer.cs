@@ -120,12 +120,12 @@ namespace OfficeHouse
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(133, 37);
+            this.label3.Location = new System.Drawing.Point(72, 29);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(312, 46);
+            this.label3.Size = new System.Drawing.Size(431, 46);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Menu Registro";
+            this.label3.Text = "Menu Registro Libro";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Menu_Registro

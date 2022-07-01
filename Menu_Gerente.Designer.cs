@@ -92,7 +92,7 @@ namespace OfficeHouse
             this.btnregistro.Name = "btnregistro";
             this.btnregistro.Size = new System.Drawing.Size(220, 47);
             this.btnregistro.TabIndex = 109;
-            this.btnregistro.Text = "Registro";
+            this.btnregistro.Text = "Registro Libro";
             this.btnregistro.UseVisualStyleBackColor = false;
             this.btnregistro.Click += new System.EventHandler(this.btnregistro_Click);
             // 

@@ -39,8 +39,6 @@ namespace OfficeHouse
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -180,26 +178,6 @@ namespace OfficeHouse
             this.textBox6.Size = new System.Drawing.Size(214, 22);
             this.textBox6.TabIndex = 150;
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(206, 135);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(280, 22);
-            this.textBox4.TabIndex = 149;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(109, 133);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 24);
-            this.label7.TabIndex = 148;
-            this.label7.Text = "Monto:";
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
@@ -265,11 +243,11 @@ namespace OfficeHouse
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(206, 176);
+            this.textBox3.Location = new System.Drawing.Point(218, 130);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(551, 78);
+            this.textBox3.Size = new System.Drawing.Size(551, 129);
             this.textBox3.TabIndex = 144;
             // 
             // label3
@@ -277,7 +255,7 @@ namespace OfficeHouse
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(62, 187);
+            this.label3.Location = new System.Drawing.Point(72, 154);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 24);
@@ -286,7 +264,7 @@ namespace OfficeHouse
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(206, 94);
+            this.textBox2.Location = new System.Drawing.Point(218, 100);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(280, 22);
@@ -297,12 +275,12 @@ namespace OfficeHouse
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(94, 96);
+            this.label2.Location = new System.Drawing.Point(3, 96);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 24);
+            this.label2.Size = new System.Drawing.Size(218, 24);
             this.label2.TabIndex = 141;
-            this.label2.Text = "Nombre:";
+            this.label2.Text = "Número de Membresía:";
             // 
             // textBox7
             // 
@@ -340,8 +318,6 @@ namespace OfficeHouse
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -371,8 +347,6 @@ namespace OfficeHouse
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;

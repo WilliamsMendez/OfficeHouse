@@ -20,8 +20,9 @@ namespace OfficeHouse
         private void btnregistro_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Membresia_cliente frm = new Membresia_cliente();
-            frm.Show();
+            Registro_Devolucion arm = new Registro_Devolucion();
+            arm.Show();
+            
             
         }
 

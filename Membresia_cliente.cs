@@ -25,7 +25,7 @@ namespace OfficeHouse
         private void btnregistro_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Menu_Registro frm = new Menu_Registro();
+            Registro_alquiler frm = new Registro_alquiler();
             frm.Show();
             Registro_Devolucion arm = new Registro_Devolucion();
             arm.Show();
