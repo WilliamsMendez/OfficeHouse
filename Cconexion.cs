@@ -28,4 +28,9 @@ namespace OfficeHouse.clases
             }
         }
     }
+
+    public class tipousuariopublico
+    {
+        static public string tipousuario;
+    }
 }

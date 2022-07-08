@@ -58,7 +58,7 @@ namespace OfficeHouse
                 CDB.Open();
                 MySqlCommand comando = new MySqlCommand();
                 comando.Connection = CDB;
-                comando.CommandText = ("Insert into devolucion(id_devolucion, fecha_devolucion, estado_libro) values('" + codigo_devolucion.Text+"', '"+fecha_devolucion.Value.ToString("yyyy/MM/dd")+"', '"+""+"', '"+estado_libro.Text+"', '"+""+"');");
+                comando.CommandText = ("Insert into devolucion(id_devolucion, fecha_devolucion, estado_libro) values('" + codigo_devolucion.Text+"', '"+fecha_devolucion.Value.ToString("yyyy/MM/dd")+"', '"+estado_libro.Text+"');");
                 comando.ExecuteNonQuery();
                 CDB.Close();
                 llenartabla();

@@ -17,6 +17,7 @@ namespace OfficeHouse
         public Usuarios()
         {
             InitializeComponent();
+            puesto_empleado();
         }
         MySqlConnection CDB = Cconexion.conex();
        
@@ -121,6 +122,22 @@ namespace OfficeHouse
             dtp_nacimiento.Value = Convert.ToDateTime(dgv_libro.SelectedCells[6].Value.ToString());
             puesto_usuario.Text = dgv_libro.SelectedCells[7].Value.ToString();
             
+        }
+
+        private void puesto_usuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void puesto_empleado()
+        {
+            string consul_Categ = "SELECT tipo_usuario FROM tipo_usuario";
+            MySqlCommand puestoemp = new MySqlCommand(consul_Categ, CDB);
+            MySqlDataAdapter da1 = new MySqlDataAdapter(puestoemp);
+            DataTable dtCateg = new DataTable();
+            da1.Fill(dtCateg);
+            puesto_usuario.DisplayMember = "tipo_usuario";
+            puesto_usuario.DataSource = dtCateg;
         }
     }
 }

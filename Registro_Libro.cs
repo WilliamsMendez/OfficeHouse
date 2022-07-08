@@ -18,7 +18,6 @@ namespace OfficeHouse
         public Registro_Libro()
         {
             InitializeComponent();
-            
         }
         //ingreso en base de datos
         MySqlConnection CDB = Cconexion.conex();
@@ -105,7 +104,7 @@ namespace OfficeHouse
             DataTable dt = new DataTable();
             adaptador.Fill(dt);
             dgv_libro.DataSource = dt;
-           
+            cbCategoria_libro();
         }
 
         private void dgv_libro_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -135,6 +134,24 @@ namespace OfficeHouse
             MessageBox.Show("Datos eliminados correctamente");
         }
 
+        private void cbCategoria_libro()
+        {
+            string consul_Categ = "SELECT Categoria FROM Categoria_libro";
+            MySqlCommand comandCateg = new MySqlCommand(consul_Categ, CDB);
+            MySqlDataAdapter da = new MySqlDataAdapter(comandCateg);
+            DataTable dtCateg = new DataTable();
+            da.Fill(dtCateg);
+            Categorialibro.DisplayMember = "Categoria";
+            Categorialibro.DataSource = dtCateg;
+
+            string consulempleado = "SELECT nombre_empleado FROM empleado";
+            MySqlCommand comandempleado = new MySqlCommand(consulempleado, CDB);
+            MySqlDataAdapter da1 = new MySqlDataAdapter(comandempleado);
+            DataTable dtemp = new DataTable();
+            da1.Fill(dtemp);
+            regitradoxtal.DisplayMember = "nombre_empleado";
+            regitradoxtal.DataSource = dtemp;
+        }
     }
 }
 

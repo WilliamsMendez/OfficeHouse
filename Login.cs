@@ -27,17 +27,32 @@ namespace OfficeHouse
         private void btn_IniSec_Click(object sender, EventArgs e)
         {
             CDB.Open();
-            MySqlCommand codigo = new MySqlCommand();
-           
+
+            MySqlCommand codigo = new MySqlCommand("select usuario_empleado, clave_empleado, puesto_empleado from empleado where usuario_empleado='" + txt_usuario.Text + "'and clave_empleado='" + txt_clave.Text + "' ");
             codigo.Connection = CDB;
-            codigo.CommandText = ("select *from empleado where usuario_empleado='" + txt_usuario.Text+"'and clave_empleado='" + txt_clave.Text+"' ");
-            MySqlDataReader leer = codigo.ExecuteReader();
-            if (leer.Read())
+            MySqlDataAdapter adapter = new MySqlDataAdapter(codigo);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            tipousuariopublico.tipousuario = dt.Rows[0][2].ToString();
+
+
+            if (dt.Rows.Count == 1)
             {
-                MessageBox.Show("Bienvenido");
-                this.Hide();
-                Menu_Gerente frm = new Menu_Gerente();
-                frm.Show();
+                if (dt.Rows[0][2].ToString() == "Gerente")
+                {
+                    MessageBox.Show("Bienvenido");
+                    this.Hide();
+                    Menu_Gerente frm = new Menu_Gerente();
+                    frm.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Menu Empleado");
+                    this.Hide();
+                    Menu_Empleado frm = new Menu_Empleado();
+                    frm.Show();
+                }
             }
             else
             {

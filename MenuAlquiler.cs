@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OfficeHouse.clases;
 
 namespace OfficeHouse
 {
@@ -46,9 +47,19 @@ namespace OfficeHouse
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Menu_Empleado frm = new Menu_Empleado();
-            frm.Show();
+            if (tipousuariopublico.tipousuario == "Gerente")
+            {
+                this.Hide();
+                Menu_Gerente frm = new Menu_Gerente();
+                frm.Show();
+
+            }
+            else
+            {
+                this.Hide();
+                Menu_Empleado frm = new Menu_Empleado();
+                frm.Show();
+            }
         }
     }
 }
