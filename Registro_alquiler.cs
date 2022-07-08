@@ -59,7 +59,13 @@ namespace OfficeHouse
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Pagos pagos = new Pagos();
+            pagos.txt_Num_Membresia.Text = codigo_alquiler.Text;
+            pagos.txt_Descripcion.Text = titulo_alquiler.Text;
+            pagos.txt_Descripcion.Text = autor_alquier.Text;
+            pagos.txt_Descripcion.Text = cantidad_alquiler.Text;
 
+            pagos.Show();
         }
 
         private void dgv_libro_CellClick(object sender, DataGridViewCellEventArgs e)

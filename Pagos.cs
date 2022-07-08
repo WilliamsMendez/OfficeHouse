@@ -17,16 +17,35 @@ namespace OfficeHouse
             InitializeComponent();
         }
 
-        private void btntarjeta_Click(object sender, EventArgs e)
+        private void btnpagar_Click(object sender, EventArgs e)
         {
-            Datos_Tarjeta frm = new Datos_Tarjeta();
-            frm.Show();
+            int cant;
+            double precio, subt, Isv, total;
+
+            cant = int.Parse(this.txt_cantidadPago.Text);
+            precio = double.Parse(this.txt_precioPago.Text);
+
+            subt = cant * precio;
+            Isv = subt * 0.15;
+            total = subt + Isv;
+
+
+            this.txt_precioPago.Text = precio.ToString();
+            this.txt_subtotal.Text = subt.ToString();
+            this.txt_isv.Text = Isv.ToString();
+            this.txt_total.Text = total.ToString();
         }
 
-        private void btnatras_Click(object sender, EventArgs e)
+        private void btnatras_Click_1(object sender, EventArgs e)
         {
             this.Close();
             Registro_Devolucion frm = new Registro_Devolucion();
+            frm.Show();
+        }
+
+        private void btntarjeta_Click_1(object sender, EventArgs e)
+        {
+            Datos_Tarjeta frm = new Datos_Tarjeta();
             frm.Show();
         }
     }
