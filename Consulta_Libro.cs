@@ -19,28 +19,7 @@ namespace OfficeHouse
             InitializeComponent();
         }
         MySqlConnection CDB = Cconexion.conex();
-
       
-        private void btnatras_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Menu_Registro frm = new Menu_Registro();
-            frm.Show();
-        }
-        public void llenartabla()
-        {
-            string consulta = "select * from libro";
-            MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
-            DataTable dt = new DataTable();
-            adaptador.Fill(dt);
-            dgv_consultalibro.DataSource = dt;
-        }
-
-        private void dgv_consultalibro_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void Consulta_Libro_Load(object sender, EventArgs e)
         {
             string consulta = "select * from libro";
@@ -50,18 +29,52 @@ namespace OfficeHouse
             dgv_consultalibro.DataSource = dt;
         }
 
-        private void btnbuscar_Click(object sender, EventArgs e)
+        private void btnbuscar_Click_1(object sender, EventArgs e)
         {
-            CDB.Open();
+            CDB.Open(); 
+            if (radioButton1.Checked == true)
+            {
+                string consulta = "select * from libro where id_libro= " + Buscar.Text + "";
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+                dgv_consultalibro.DataSource = dt;
+                MySqlCommand comando = new MySqlCommand(consulta, CDB);
+                MySqlDataReader lector;
+                lector = comando.ExecuteReader();
+            }
+            else
+                if (radioButton2.Checked == true)
+            {
+                string consulta = "select * from libro where titulo_libro= '" + Buscar.Text + "'";
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+                dgv_consultalibro.DataSource = dt;
+                MySqlCommand comando = new MySqlCommand(consulta, CDB);
+                MySqlDataReader lector;
+                lector = comando.ExecuteReader();
+            }
+            else
+                 if (radioButton3.Checked == true)
+            {
+                string consulta = "select * from libro where autor_libro= '" + Buscar.Text + "'";
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+                dgv_consultalibro.DataSource = dt;
+                MySqlCommand comando = new MySqlCommand(consulta, CDB);
+                MySqlDataReader lector;
+                lector = comando.ExecuteReader();
+            }
+            CDB.Close();
+        }
 
-            string consulta = "select * from libro where id_libro= " + txt_codigo.Text + "";
-            MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
-            DataTable dt = new DataTable();
-            adaptador.Fill(dt);
-            dgv_consultalibro.DataSource = dt;
-            MySqlCommand comando = new MySqlCommand(consulta, CDB);
-            MySqlDataReader lector;
-            lector = comando.ExecuteReader();
+        private void btnatras_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu_Registro frm = new Menu_Registro();
+            frm.Show();
         }
     }
 }

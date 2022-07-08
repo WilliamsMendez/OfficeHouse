@@ -56,12 +56,12 @@ namespace OfficeHouse
             }
             else
             {
-                MessageBox.Show("Usuario o contrase;a incorrectos");
+                MessageBox.Show("Usuario o contraseña incorrectos");
                 
             }
             CDB.Close();
-            
-
+           
+           
         }
 
         private void btnprueba_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace OfficeHouse
             try
             {
                 CDB.Open();
-                MessageBox.Show("conexion exitosa");
+                MessageBox.Show("Conexion exitosa");
                 CDB.Close();
             }
             catch (Exception x)
