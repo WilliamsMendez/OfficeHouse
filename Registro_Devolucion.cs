@@ -28,6 +28,7 @@ namespace OfficeHouse
             DataTable dt = new DataTable();
             adaptador.Fill(dt);
             dgv_devolucion.DataSource = dt;
+            
         }
         private void Registro_Devolucion_Load(object sender, EventArgs e)
         {
@@ -36,6 +37,7 @@ namespace OfficeHouse
             DataTable dt = new DataTable();
             adaptador.Fill(dt);
             dgv_devolucion.DataSource = dt;
+            cbestadolibro();
         }
 
         private void cb_puesto_SelectedIndexChanged(object sender, EventArgs e)
@@ -110,6 +112,18 @@ namespace OfficeHouse
             fecha_devolucion.Text = dgv_devolucion.SelectedCells[1].Value.ToString();
             estado_libro.Text = dgv_devolucion.SelectedCells[2].Value.ToString();
            
+        }
+
+        private void cbestadolibro()
+        {
+            string consulestado = "SELECT estadolibro FROM estado_libro";
+            MySqlCommand comanestado = new MySqlCommand(consulestado, CDB);
+            MySqlDataAdapter da = new MySqlDataAdapter(comanestado);
+            DataTable dtestado = new DataTable();
+            da.Fill(dtestado);
+            estado_libro.DisplayMember = "estadolibro";
+            estado_libro.DataSource = dtestado;
+            
         }
     }
 }
