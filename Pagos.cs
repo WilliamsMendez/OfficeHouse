@@ -25,7 +25,9 @@ namespace OfficeHouse
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            Registro_Devolucion frm = new Registro_Devolucion();
+            frm.Show();
         }
     }
 }

@@ -125,5 +125,19 @@ namespace OfficeHouse
             estado_libro.DataSource = dtestado;
             
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(estado_libro.Text == "Mal estado")
+            {
+                this.Hide();
+                Pagos frm = new Pagos();
+                frm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Devolucion realizada correctamente");
+            }
+        }
     }
 }
