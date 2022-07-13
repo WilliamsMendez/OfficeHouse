@@ -38,6 +38,7 @@ namespace OfficeHouse
             adaptador.Fill(dt);
             dgv_devolucion.DataSource = dt;
             cbestadolibro();
+            consultalibro();
         }
 
         private void cb_puesto_SelectedIndexChanged(object sender, EventArgs e)
@@ -138,6 +139,29 @@ namespace OfficeHouse
             {
                 MessageBox.Show("Devolucion realizada correctamente");
             }
+        }
+
+        private void consultalibro()
+        {
+            string consullibro = "SELECT titulo_libro,autor_libro FROM libro";
+            MySqlCommand comandlibro = new MySqlCommand(consullibro, CDB);
+            MySqlDataAdapter da = new MySqlDataAdapter(comandlibro);
+            DataTable dtlibro = new DataTable();
+            da.Fill(dtlibro);
+            titulo_devolucion.DisplayMember = "titulo_libro";
+            titulo_devolucion.DataSource = dtlibro;
+            autor_devolucion.Text = dtlibro.Rows[0][1].ToString();
+
+        }
+
+        private void titulo_devolucion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string consullibro = "SELECT autor_libro FROM libro WHERE titulo_libro= '" + titulo_devolucion.Text + "'";
+            MySqlCommand comandlibro = new MySqlCommand(consullibro, CDB);
+            MySqlDataAdapter da = new MySqlDataAdapter(comandlibro);
+            DataTable dtlibro = new DataTable();
+            da.Fill(dtlibro);
+            autor_devolucion.Text = dtlibro.Rows[0][0].ToString();
         }
     }
 }

@@ -34,7 +34,6 @@ namespace OfficeHouse
             this.label9 = new System.Windows.Forms.Label();
             this.autor_devolucion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.titulo_devolucion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.codigo_devolucion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +48,7 @@ namespace OfficeHouse
             this.estado_libro = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgv_devolucion = new System.Windows.Forms.DataGridView();
+            this.titulo_devolucion = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_devolucion)).BeginInit();
@@ -76,6 +76,7 @@ namespace OfficeHouse
             // 
             // autor_devolucion
             // 
+            this.autor_devolucion.Enabled = false;
             this.autor_devolucion.Location = new System.Drawing.Point(211, 106);
             this.autor_devolucion.Name = "autor_devolucion";
             this.autor_devolucion.Size = new System.Drawing.Size(184, 27);
@@ -91,13 +92,6 @@ namespace OfficeHouse
             this.label5.Size = new System.Drawing.Size(55, 19);
             this.label5.TabIndex = 173;
             this.label5.Text = "Autor:";
-            // 
-            // titulo_devolucion
-            // 
-            this.titulo_devolucion.Location = new System.Drawing.Point(211, 63);
-            this.titulo_devolucion.Name = "titulo_devolucion";
-            this.titulo_devolucion.Size = new System.Drawing.Size(184, 27);
-            this.titulo_devolucion.TabIndex = 172;
             // 
             // label2
             // 
@@ -247,13 +241,13 @@ namespace OfficeHouse
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.titulo_devolucion);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.estado_libro);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.codigo_devolucion);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.titulo_devolucion);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.autor_devolucion);
             this.groupBox1.Controls.Add(this.fecha_devolucion);
@@ -283,6 +277,15 @@ namespace OfficeHouse
             this.dgv_devolucion.TabIndex = 210;
             this.dgv_devolucion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_devolucion_CellClick);
             // 
+            // titulo_devolucion
+            // 
+            this.titulo_devolucion.FormattingEnabled = true;
+            this.titulo_devolucion.Location = new System.Drawing.Point(211, 62);
+            this.titulo_devolucion.Name = "titulo_devolucion";
+            this.titulo_devolucion.Size = new System.Drawing.Size(184, 27);
+            this.titulo_devolucion.TabIndex = 204;
+            this.titulo_devolucion.SelectedIndexChanged += new System.EventHandler(this.titulo_devolucion_SelectedIndexChanged);
+            // 
             // Registro_Devolucion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,7 +300,7 @@ namespace OfficeHouse
             this.Controls.Add(this.btnpagar);
             this.Controls.Add(this.btnatras);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Registro_Devolucion";
             this.Text = "Registro_Devolucion";
             this.Load += new System.EventHandler(this.Registro_Devolucion_Load);
@@ -315,7 +318,6 @@ namespace OfficeHouse
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox autor_devolucion;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox titulo_devolucion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox codigo_devolucion;
         private System.Windows.Forms.Label label1;
@@ -330,5 +332,6 @@ namespace OfficeHouse
         private System.Windows.Forms.ComboBox estado_libro;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgv_devolucion;
+        private System.Windows.Forms.ComboBox titulo_devolucion;
     }
 }

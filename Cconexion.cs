@@ -32,5 +32,18 @@ namespace OfficeHouse.clases
     public class tipousuariopublico
     {
         static public string tipousuario;
+        static public string numeromem;
+    }
+
+    public class pantallaav
+    {
+        static public int av;
+    }
+
+    public class datospago
+    {
+        static public string tituloalquiler;
+        static public string autoralquiler;
+        static public string cantidadlibro;
     }
 }

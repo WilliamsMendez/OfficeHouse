@@ -44,22 +44,43 @@ namespace OfficeHouse
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             //ingreso en base de datos
+            if(puesto_usuario.Text == "Cliente")
+            {
+                try
+                {
+                    CDB.Open();
+                    MySqlCommand comando = new MySqlCommand();
+                    comando.Connection = CDB;
+                    comando.CommandText = ("Insert into cliente(id_cliente, nombre_cliente, apellido_cliente, fecha_nacimiento_cliente) values('" + codigo_usuario.Text + "', '" + nombre_usuario.Text + "', '" + apellido_usuario.Text + "','" + dtp_nacimiento.Value.ToString("yyyy/MM/dd") + "');");
+                    comando.ExecuteNonQuery();
+                    llenartabla();
+                    CDB.Close();
+                    MessageBox.Show("Datos ingresados correctamente");
+                }
+                catch (Exception i)
+                {
+                    MessageBox.Show(i.Message + i.StackTrace);
+                }
+            }
+            else
+            {
+                try
+                {
+                    CDB.Open();
+                    MySqlCommand comando = new MySqlCommand();
+                    comando.Connection = CDB;
+                    comando.CommandText = ("Insert into empleado(id_empleado, nombre_empleado, apellido_empleado, usuario_empleado, clave_empleado, fecha_contratacion, fecha_nacimiento_empleado, puesto_empleado  ) values('" + codigo_usuario.Text + "', '" + nombre_usuario.Text + "', '" + apellido_usuario.Text + "', '" + usuario_usuario.Text + "', '" + clave_usuario.Text + "', '" + dtp_contratacion.Value.ToString("yyyy/MM/dd") + "','" + dtp_nacimiento.Value.ToString("yyyy/MM/dd") + "', '" + puesto_usuario.Text + "');");
+                    comando.ExecuteNonQuery();
+                    llenartabla();
+                    CDB.Close();
+                    MessageBox.Show("Datos ingresados correctamente");
+                }
+                catch (Exception i)
+                {
+                    MessageBox.Show(i.Message + i.StackTrace);
+                }
+            }
             
-            try
-            {
-                CDB.Open();
-                MySqlCommand comando = new MySqlCommand();
-                comando.Connection = CDB;
-                comando.CommandText = ("Insert into empleado(id_empleado, nombre_empleado, apellido_empleado, usuario_empleado, clave_empleado, fecha_contratacion, fecha_nacimiento_empleado, puesto_empleado  ) values('"+ codigo_usuario.Text+"', '"+nombre_usuario.Text+"', '"+apellido_usuario.Text+"', '"+usuario_usuario.Text+"', '"+clave_usuario.Text+"', '"+dtp_contratacion.Value.ToString("yyyy/MM/dd")+"','"+dtp_nacimiento.Value.ToString("yyyy/MM/dd")+"', '"+puesto_usuario.Text+"');");
-                comando.ExecuteNonQuery();
-                llenartabla();
-                CDB.Close();
-                MessageBox.Show("Datos ingresados correctamente");
-            }
-            catch (Exception i)
-            {
-                MessageBox.Show(i.Message + i.StackTrace);
-            }
         }
 
         private void dtp_contratacion_ValueChanged(object sender, EventArgs e)
@@ -126,7 +147,18 @@ namespace OfficeHouse
 
         private void puesto_usuario_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if(puesto_usuario.Text == "Cliente")
+            {
+                dtp_contratacion.Enabled = false;
+                usuario_usuario.Enabled = false;
+                clave_usuario.Enabled = false;
+            }
+            else
+            {
+                dtp_contratacion.Enabled = true;
+                usuario_usuario.Enabled = true;
+                clave_usuario.Enabled = true;
+            }
         }
 
         private void puesto_empleado()

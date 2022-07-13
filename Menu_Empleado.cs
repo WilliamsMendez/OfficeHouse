@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OfficeHouse.clases;
 
 namespace OfficeHouse
 {
@@ -19,10 +20,10 @@ namespace OfficeHouse
 
         private void btnalquiler_Click(object sender, EventArgs e)
         {
+            pantallaav.av = 1;
             this.Hide();
-            MenuAlquiler frm = new MenuAlquiler();
+            Membresia_cliente frm = new Membresia_cliente();
             frm.Show();
-            
         }
 
         private void btnregistro_Click(object sender, EventArgs e)

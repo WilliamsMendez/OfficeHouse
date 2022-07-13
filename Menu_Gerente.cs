@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OfficeHouse.clases;
 
 namespace OfficeHouse
 {
@@ -27,15 +28,17 @@ namespace OfficeHouse
 
         private void btnalquiler_Click(object sender, EventArgs e)
         {
+            pantallaav.av = 1;
             this.Hide();
-            MenuAlquiler frm = new MenuAlquiler();
+            Membresia_cliente frm = new Membresia_cliente();
             frm.Show();
         }
 
         private void btndevoluciones_Click(object sender, EventArgs e)
         {
+            pantallaav.av = 2;
             this.Hide();
-            MenuDevolucion frm = new MenuDevolucion();
+            Membresia_cliente frm = new Membresia_cliente();
             frm.Show();
         }
 
@@ -51,6 +54,11 @@ namespace OfficeHouse
             this.Hide();
             Usuarios frm = new Usuarios();
             frm.Show();
+        }
+
+        private void Menu_Gerente_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

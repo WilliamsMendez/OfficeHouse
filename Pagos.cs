@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OfficeHouse.clases;
 
 namespace OfficeHouse
 {
     public partial class Pagos : Form
     {
+        
+
         public Pagos()
         {
             InitializeComponent();
@@ -39,7 +42,7 @@ namespace OfficeHouse
         private void btnatras_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            Registro_Devolucion frm = new Registro_Devolucion();
+            Registro_alquiler frm = new Registro_alquiler();
             frm.Show();
         }
 
@@ -47,6 +50,22 @@ namespace OfficeHouse
         {
             Datos_Tarjeta frm = new Datos_Tarjeta();
             frm.Show();
+        }
+
+        private void txt_Descripcion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Num_Membresia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pagos_Load(object sender, EventArgs e)
+        {
+            txt_Num_Membresia.Text = tipousuariopublico.numeromem;
+            txt_Descripcion.Text = datospago.tituloalquiler + datospago.autoralquiler + datospago.cantidadlibro;
         }
     }
 }

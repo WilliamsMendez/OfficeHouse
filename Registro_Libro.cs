@@ -151,6 +151,14 @@ namespace OfficeHouse
             da1.Fill(dtemp);
             regitradoxtal.DisplayMember = "nombre_empleado";
             regitradoxtal.DataSource = dtemp;
+
+            string consuledit = "SELECT editorial FROM Editorial";
+            MySqlCommand comandoedit = new MySqlCommand(consuledit, CDB);
+            MySqlDataAdapter da2 = new MySqlDataAdapter(comandoedit);
+            DataTable dtedit = new DataTable();
+            da2.Fill(dtedit);
+            Editoriallibro.DisplayMember = "editorial";
+            Editoriallibro.DataSource = dtedit;
         }
     }
 }

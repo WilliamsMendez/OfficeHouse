@@ -49,10 +49,9 @@ namespace OfficeHouse
             this.btndevoluciones.FlatAppearance.BorderSize = 0;
             this.btndevoluciones.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
             this.btndevoluciones.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndevoluciones.Location = new System.Drawing.Point(126, 391);
-            this.btndevoluciones.Margin = new System.Windows.Forms.Padding(4);
+            this.btndevoluciones.Location = new System.Drawing.Point(94, 318);
             this.btndevoluciones.Name = "btndevoluciones";
-            this.btndevoluciones.Size = new System.Drawing.Size(220, 47);
+            this.btndevoluciones.Size = new System.Drawing.Size(165, 38);
             this.btndevoluciones.TabIndex = 113;
             this.btndevoluciones.Text = "Devoluciones";
             this.btndevoluciones.UseVisualStyleBackColor = false;
@@ -68,10 +67,9 @@ namespace OfficeHouse
             this.btnalquiler.FlatAppearance.BorderSize = 0;
             this.btnalquiler.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
             this.btnalquiler.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnalquiler.Location = new System.Drawing.Point(126, 321);
-            this.btnalquiler.Margin = new System.Windows.Forms.Padding(4);
+            this.btnalquiler.Location = new System.Drawing.Point(94, 261);
             this.btnalquiler.Name = "btnalquiler";
-            this.btnalquiler.Size = new System.Drawing.Size(220, 47);
+            this.btnalquiler.Size = new System.Drawing.Size(165, 38);
             this.btnalquiler.TabIndex = 110;
             this.btnalquiler.Text = "Alquiler";
             this.btnalquiler.UseVisualStyleBackColor = false;
@@ -87,10 +85,9 @@ namespace OfficeHouse
             this.btnregistro.FlatAppearance.BorderSize = 0;
             this.btnregistro.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
             this.btnregistro.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnregistro.Location = new System.Drawing.Point(126, 249);
-            this.btnregistro.Margin = new System.Windows.Forms.Padding(4);
+            this.btnregistro.Location = new System.Drawing.Point(94, 202);
             this.btnregistro.Name = "btnregistro";
-            this.btnregistro.Size = new System.Drawing.Size(220, 47);
+            this.btnregistro.Size = new System.Drawing.Size(165, 38);
             this.btnregistro.TabIndex = 109;
             this.btnregistro.Text = "Registro Libro";
             this.btnregistro.UseVisualStyleBackColor = false;
@@ -103,10 +100,9 @@ namespace OfficeHouse
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::OfficeHouse.Properties.Resources._0C1231;
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(-3, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(-2, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(460, 105);
+            this.panel1.Size = new System.Drawing.Size(345, 85);
             this.panel1.TabIndex = 112;
             // 
             // label3
@@ -115,10 +111,9 @@ namespace OfficeHouse
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(58, 31);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(44, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(359, 46);
+            this.label3.Size = new System.Drawing.Size(286, 36);
             this.label3.TabIndex = 10;
             this.label3.Text = "Menu de Gerente";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -132,10 +127,9 @@ namespace OfficeHouse
             this.btnusuario.FlatAppearance.BorderSize = 0;
             this.btnusuario.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
             this.btnusuario.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnusuario.Location = new System.Drawing.Point(126, 176);
-            this.btnusuario.Margin = new System.Windows.Forms.Padding(4);
+            this.btnusuario.Location = new System.Drawing.Point(94, 143);
             this.btnusuario.Name = "btnusuario";
-            this.btnusuario.Size = new System.Drawing.Size(220, 47);
+            this.btnusuario.Size = new System.Drawing.Size(165, 38);
             this.btnusuario.TabIndex = 108;
             this.btnusuario.Text = "Usuarios";
             this.btnusuario.UseVisualStyleBackColor = false;
@@ -151,10 +145,9 @@ namespace OfficeHouse
             this.btncerrarses.FlatAppearance.BorderSize = 0;
             this.btncerrarses.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
             this.btncerrarses.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncerrarses.Location = new System.Drawing.Point(126, 461);
-            this.btncerrarses.Margin = new System.Windows.Forms.Padding(4);
+            this.btncerrarses.Location = new System.Drawing.Point(94, 375);
             this.btncerrarses.Name = "btncerrarses";
-            this.btncerrarses.Size = new System.Drawing.Size(220, 47);
+            this.btncerrarses.Size = new System.Drawing.Size(165, 38);
             this.btncerrarses.TabIndex = 111;
             this.btncerrarses.Text = "Cerrar sesión";
             this.btncerrarses.UseVisualStyleBackColor = false;
@@ -162,18 +155,20 @@ namespace OfficeHouse
             // 
             // Menu_Gerente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::OfficeHouse.Properties.Resources.CCB38D;
-            this.ClientSize = new System.Drawing.Size(455, 583);
+            this.ClientSize = new System.Drawing.Size(341, 474);
             this.Controls.Add(this.btndevoluciones);
             this.Controls.Add(this.btnalquiler);
             this.Controls.Add(this.btnregistro);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnusuario);
             this.Controls.Add(this.btncerrarses);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Menu_Gerente";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Menu_Gerente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
