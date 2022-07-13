@@ -65,7 +65,7 @@ namespace OfficeHouse
         private void Pagos_Load(object sender, EventArgs e)
         {
             txt_Num_Membresia.Text = tipousuariopublico.numeromem;
-            txt_Descripcion.Text = datospago.tituloalquiler + datospago.autoralquiler + datospago.cantidadlibro;
+            txt_Descripcion.Text = "Titulo="+ datospago.tituloalquiler+"   Autor=" +datospago.autoralquiler +"   Cantidad de libros= " +datospago.cantidadlibro + "";
         }
     }
 }
