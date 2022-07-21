@@ -60,7 +60,9 @@ namespace OfficeHouse
 
         private void btnusuario_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Menu_Gerente frm = new Menu_Gerente();
+            frm.Show();
         }
     }
 }
