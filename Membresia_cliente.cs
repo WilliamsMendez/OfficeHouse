@@ -23,12 +23,12 @@ namespace OfficeHouse
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+         
         }
 
         private void btnregistro_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
             string comando = "SELECT id_cliente FROM cliente where id_cliente ='"+textBox1.Text+"' ";
             MySqlCommand codigo = new MySqlCommand(comando, CDB);
             MySqlDataAdapter adapter = new MySqlDataAdapter(codigo);
@@ -63,6 +63,36 @@ namespace OfficeHouse
             this.Hide();
             Menu_Gerente frm = new Menu_Gerente();
             frm.Show();
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if((e.KeyChar >=32 && e.KeyChar <=47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Ingrese solo números", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void textBox1_Validated(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Trim() == "")
+            {
+                epError.SetError(textBox1, "Ingrese su menbresia....");
+                textBox1.Focus  ();
+
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
+        private void btnregistro_Validated(object sender, EventArgs e)
+        {
+            MessageBox.Show("Membresia:" + textBox1.Text);
+
         }
     }
 }
