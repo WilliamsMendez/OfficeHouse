@@ -29,6 +29,7 @@ namespace OfficeHouse
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro_Devolucion));
             this.fecha_devolucion = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
@@ -49,9 +50,11 @@ namespace OfficeHouse
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.titulo_devolucion = new System.Windows.Forms.ComboBox();
             this.dgv_devolucion = new System.Windows.Forms.DataGridView();
+            this.epError = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_devolucion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epError)).BeginInit();
             this.SuspendLayout();
             // 
             // fecha_devolucion
@@ -59,7 +62,7 @@ namespace OfficeHouse
             this.fecha_devolucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha_devolucion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fecha_devolucion.Location = new System.Drawing.Point(281, 185);
-            this.fecha_devolucion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fecha_devolucion.Margin = new System.Windows.Forms.Padding(4);
             this.fecha_devolucion.Name = "fecha_devolucion";
             this.fecha_devolucion.Size = new System.Drawing.Size(244, 27);
             this.fecha_devolucion.TabIndex = 180;
@@ -80,7 +83,7 @@ namespace OfficeHouse
             // 
             this.autor_devolucion.Enabled = false;
             this.autor_devolucion.Location = new System.Drawing.Point(281, 130);
-            this.autor_devolucion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.autor_devolucion.Margin = new System.Windows.Forms.Padding(4);
             this.autor_devolucion.Name = "autor_devolucion";
             this.autor_devolucion.Size = new System.Drawing.Size(244, 32);
             this.autor_devolucion.TabIndex = 174;
@@ -112,7 +115,7 @@ namespace OfficeHouse
             // codigo_devolucion
             // 
             this.codigo_devolucion.Location = new System.Drawing.Point(281, 27);
-            this.codigo_devolucion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.codigo_devolucion.Margin = new System.Windows.Forms.Padding(4);
             this.codigo_devolucion.Name = "codigo_devolucion";
             this.codigo_devolucion.Size = new System.Drawing.Size(244, 32);
             this.codigo_devolucion.TabIndex = 170;
@@ -139,7 +142,7 @@ namespace OfficeHouse
             this.panel2.BackgroundImage = global::OfficeHouse.Properties.Resources._0C1231;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(-3, -2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(957, 101);
             this.panel2.TabIndex = 167;
@@ -164,7 +167,7 @@ namespace OfficeHouse
             this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button2.Location = new System.Drawing.Point(719, 138);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 60);
             this.button2.TabIndex = 188;
@@ -179,7 +182,7 @@ namespace OfficeHouse
             this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(565, 224);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 60);
             this.button1.TabIndex = 187;
@@ -194,7 +197,7 @@ namespace OfficeHouse
             this.btnpagar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnpagar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnpagar.Location = new System.Drawing.Point(565, 138);
-            this.btnpagar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnpagar.Margin = new System.Windows.Forms.Padding(4);
             this.btnpagar.Name = "btnpagar";
             this.btnpagar.Size = new System.Drawing.Size(124, 60);
             this.btnpagar.TabIndex = 186;
@@ -209,7 +212,7 @@ namespace OfficeHouse
             this.btnatras.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnatras.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnatras.Location = new System.Drawing.Point(640, 305);
-            this.btnatras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnatras.Margin = new System.Windows.Forms.Padding(4);
             this.btnatras.Name = "btnatras";
             this.btnatras.Size = new System.Drawing.Size(124, 60);
             this.btnatras.TabIndex = 185;
@@ -224,7 +227,7 @@ namespace OfficeHouse
             this.button3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button3.Location = new System.Drawing.Point(719, 224);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(131, 60);
             this.button3.TabIndex = 201;
@@ -251,7 +254,7 @@ namespace OfficeHouse
             this.estado_libro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.estado_libro.FormattingEnabled = true;
             this.estado_libro.Location = new System.Drawing.Point(281, 230);
-            this.estado_libro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.estado_libro.Margin = new System.Windows.Forms.Padding(4);
             this.estado_libro.Name = "estado_libro";
             this.estado_libro.Size = new System.Drawing.Size(244, 25);
             this.estado_libro.TabIndex = 203;
@@ -272,9 +275,9 @@ namespace OfficeHouse
             this.groupBox1.Controls.Add(this.fecha_devolucion);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(13, 106);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(545, 279);
             this.groupBox1.TabIndex = 204;
             this.groupBox1.TabStop = false;
@@ -285,7 +288,7 @@ namespace OfficeHouse
             this.titulo_devolucion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.titulo_devolucion.FormattingEnabled = true;
             this.titulo_devolucion.Location = new System.Drawing.Point(281, 76);
-            this.titulo_devolucion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.titulo_devolucion.Margin = new System.Windows.Forms.Padding(4);
             this.titulo_devolucion.Name = "titulo_devolucion";
             this.titulo_devolucion.Size = new System.Drawing.Size(244, 32);
             this.titulo_devolucion.TabIndex = 204;
@@ -301,7 +304,7 @@ namespace OfficeHouse
             this.dgv_devolucion.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_devolucion.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_devolucion.Location = new System.Drawing.Point(13, 393);
-            this.dgv_devolucion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_devolucion.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_devolucion.MultiSelect = false;
             this.dgv_devolucion.Name = "dgv_devolucion";
             this.dgv_devolucion.ReadOnly = true;
@@ -310,6 +313,10 @@ namespace OfficeHouse
             this.dgv_devolucion.Size = new System.Drawing.Size(923, 190);
             this.dgv_devolucion.TabIndex = 210;
             this.dgv_devolucion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_devolucion_CellClick);
+            // 
+            // epError
+            // 
+            this.epError.ContainerControl = this;
             // 
             // Registro_Devolucion
             // 
@@ -334,6 +341,7 @@ namespace OfficeHouse
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_devolucion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epError)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -358,5 +366,6 @@ namespace OfficeHouse
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgv_devolucion;
         private System.Windows.Forms.ComboBox titulo_devolucion;
+        private System.Windows.Forms.ErrorProvider epError;
     }
 }
