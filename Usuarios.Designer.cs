@@ -29,6 +29,7 @@ namespace OfficeHouse
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,9 +57,11 @@ namespace OfficeHouse
             this.btnatras = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgv_libro = new System.Windows.Forms.DataGridView();
+            this.epError = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_libro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epError)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -69,7 +72,7 @@ namespace OfficeHouse
             this.panel2.BackgroundImage = global::OfficeHouse.Properties.Resources._0C1231;
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(-3, -2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1037, 74);
             this.panel2.TabIndex = 135;
@@ -138,34 +141,37 @@ namespace OfficeHouse
             this.apellido_usuario.BackColor = System.Drawing.SystemColors.Control;
             this.apellido_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.apellido_usuario.Location = new System.Drawing.Point(145, 105);
-            this.apellido_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.apellido_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.apellido_usuario.Name = "apellido_usuario";
             this.apellido_usuario.Size = new System.Drawing.Size(132, 23);
             this.apellido_usuario.TabIndex = 127;
             this.apellido_usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.apellido_usuario_KeyPress);
+            this.apellido_usuario.Validated += new System.EventHandler(this.apellido_usuario_Validated);
             // 
             // nombre_usuario
             // 
             this.nombre_usuario.BackColor = System.Drawing.SystemColors.Control;
             this.nombre_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.nombre_usuario.Location = new System.Drawing.Point(145, 66);
-            this.nombre_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nombre_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.nombre_usuario.Name = "nombre_usuario";
             this.nombre_usuario.Size = new System.Drawing.Size(132, 23);
             this.nombre_usuario.TabIndex = 128;
             this.nombre_usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombre_usuario_KeyPress);
+            this.nombre_usuario.Validated += new System.EventHandler(this.nombre_usuario_Validated);
             // 
             // codigo_usuario
             // 
             this.codigo_usuario.BackColor = System.Drawing.SystemColors.Control;
             this.codigo_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.codigo_usuario.Location = new System.Drawing.Point(145, 31);
-            this.codigo_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.codigo_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.codigo_usuario.Name = "codigo_usuario";
             this.codigo_usuario.Size = new System.Drawing.Size(132, 23);
             this.codigo_usuario.TabIndex = 129;
             this.codigo_usuario.TextChanged += new System.EventHandler(this.txt_codigo_TextChanged);
             this.codigo_usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.codigo_usuario_KeyPress);
+            this.codigo_usuario.Validated += new System.EventHandler(this.codigo_usuario_Validated);
             // 
             // label8
             // 
@@ -219,7 +225,7 @@ namespace OfficeHouse
             this.clave_usuario.BackColor = System.Drawing.SystemColors.Control;
             this.clave_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.clave_usuario.Location = new System.Drawing.Point(145, 231);
-            this.clave_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clave_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.clave_usuario.Name = "clave_usuario";
             this.clave_usuario.Size = new System.Drawing.Size(132, 23);
             this.clave_usuario.TabIndex = 135;
@@ -229,7 +235,7 @@ namespace OfficeHouse
             this.usuario_usuario.BackColor = System.Drawing.SystemColors.Control;
             this.usuario_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.usuario_usuario.Location = new System.Drawing.Point(145, 202);
-            this.usuario_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usuario_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.usuario_usuario.Name = "usuario_usuario";
             this.usuario_usuario.Size = new System.Drawing.Size(132, 23);
             this.usuario_usuario.TabIndex = 136;
@@ -254,7 +260,7 @@ namespace OfficeHouse
             this.btnmodificar.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.btnmodificar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmodificar.Location = new System.Drawing.Point(512, 97);
-            this.btnmodificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnmodificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnmodificar.Name = "btnmodificar";
             this.btnmodificar.Size = new System.Drawing.Size(135, 55);
             this.btnmodificar.TabIndex = 126;
@@ -269,7 +275,7 @@ namespace OfficeHouse
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.btnAgregar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(349, 97);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(135, 55);
             this.btnAgregar.TabIndex = 125;
@@ -280,10 +286,10 @@ namespace OfficeHouse
             // puesto_usuario
             // 
             this.puesto_usuario.BackColor = System.Drawing.SystemColors.Control;
+            this.puesto_usuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.puesto_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.puesto_usuario.FormattingEnabled = true;
             this.puesto_usuario.Location = new System.Drawing.Point(440, 27);
-            this.puesto_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.puesto_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.puesto_usuario.Name = "puesto_usuario";
             this.puesto_usuario.Size = new System.Drawing.Size(143, 25);
             this.puesto_usuario.TabIndex = 141;
@@ -308,7 +314,7 @@ namespace OfficeHouse
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.btnEliminar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(349, 166);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(135, 55);
             this.btnEliminar.TabIndex = 127;
@@ -348,7 +354,7 @@ namespace OfficeHouse
             this.btnatras.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.btnatras.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnatras.Location = new System.Drawing.Point(512, 166);
-            this.btnatras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnatras.Margin = new System.Windows.Forms.Padding(4);
             this.btnatras.Name = "btnatras";
             this.btnatras.Size = new System.Drawing.Size(135, 55);
             this.btnatras.TabIndex = 130;
@@ -382,9 +388,9 @@ namespace OfficeHouse
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(95, 79);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(676, 262);
             this.groupBox1.TabIndex = 133;
             this.groupBox1.TabStop = false;
@@ -399,7 +405,7 @@ namespace OfficeHouse
             this.dgv_libro.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_libro.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_libro.Location = new System.Drawing.Point(13, 359);
-            this.dgv_libro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_libro.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_libro.MultiSelect = false;
             this.dgv_libro.Name = "dgv_libro";
             this.dgv_libro.ReadOnly = true;
@@ -408,6 +414,10 @@ namespace OfficeHouse
             this.dgv_libro.Size = new System.Drawing.Size(997, 210);
             this.dgv_libro.TabIndex = 199;
             this.dgv_libro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_libro_CellClick);
+            // 
+            // epError
+            // 
+            this.epError.ContainerControl = this;
             // 
             // Usuarios
             // 
@@ -428,6 +438,7 @@ namespace OfficeHouse
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_libro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,7 +464,6 @@ namespace OfficeHouse
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnmodificar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.ComboBox puesto_usuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DateTimePicker dtp_nacimiento;
@@ -461,5 +471,7 @@ namespace OfficeHouse
         private System.Windows.Forms.Button btnatras;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgv_libro;
+        protected System.Windows.Forms.ComboBox puesto_usuario;
+        private System.Windows.Forms.ErrorProvider epError;
     }
 }

@@ -163,5 +163,34 @@ namespace OfficeHouse
             da.Fill(dtlibro);
             autor_devolucion.Text = dtlibro.Rows[0][0].ToString();
         }
+
+        private void codigo_devolucion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo se permiten numeros en el codigo", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void codigo_devolucion_Validated(object sender, EventArgs e)
+        {
+            if (codigo_devolucion.Text.Trim() == "")
+            {
+                epError.SetError(codigo_devolucion, "Ingrese el codigo....");
+                codigo_devolucion.Focus();
+
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
+        private void titulo_devolucion_Validated(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

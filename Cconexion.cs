@@ -42,8 +42,9 @@ namespace OfficeHouse.clases
 
     public class datospago
     {
+        static public double precio;
         static public string tituloalquiler;
         static public string autoralquiler;
-        static public string cantidadlibro;
+        static public int cantidadlibro;
     }
 }

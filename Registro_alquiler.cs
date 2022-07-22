@@ -62,7 +62,7 @@ namespace OfficeHouse
         {
             datospago.tituloalquiler = titulo_alquiler.Text;
             datospago.autoralquiler = autor_alquier.Text;
-            datospago.cantidadlibro = cantidad_alquiler.Text;
+            datospago.cantidadlibro = int.Parse(cantidad_alquiler.Text);
             this.Close();
             Pagos pagos = new Pagos();
             pagos.Show();
@@ -143,6 +143,36 @@ namespace OfficeHouse
             DataTable dtlibro = new DataTable();
             da.Fill(dtlibro);
             autor_alquier.Text = dtlibro.Rows[0][0].ToString();
+        }
+
+        private void codigo_alquiler_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void codigo_alquiler_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo se permiten numeros en el codigo", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void cantidad_alquiler_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cantidad_alquiler_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo se permiten numeros en el codigo", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

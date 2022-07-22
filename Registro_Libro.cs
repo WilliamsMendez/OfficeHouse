@@ -18,6 +18,7 @@ namespace OfficeHouse
         public Registro_Libro()
         {
             InitializeComponent();
+            
         }
         //ingreso en base de datos
         MySqlConnection CDB = Cconexion.conex();
@@ -67,7 +68,7 @@ namespace OfficeHouse
             {
                 MessageBox.Show(i.Message + i.StackTrace);
             }
-
+           
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -114,7 +115,6 @@ namespace OfficeHouse
             Autorlibro.Text = dgv_libro.SelectedCells[2].Value.ToString();
             Editoriallibro.Text = dgv_libro.SelectedCells[3].Value.ToString();
             Categorialibro.Text = dgv_libro.SelectedCells[4].Value.ToString();
-            //regitradoxtal.SelectedIndex = dgv_libro.SelectedCells[6].Value.ToString();
             preciolibro.Text = dgv_libro.SelectedCells[5].Value.ToString();
             fechaingresolibro.Value = Convert.ToDateTime(dgv_libro.SelectedCells[6].Value.ToString());
 
@@ -159,6 +159,102 @@ namespace OfficeHouse
             da2.Fill(dtedit);
             Editoriallibro.DisplayMember = "editorial";
             Editoriallibro.DataSource = dtedit;
+        }
+
+        private void dgv_libro_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txt_codigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo se permiten numeros en el codigo", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void preciolibro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void preciolibro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo se permiten numeros en el codigo", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void Autorlibro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo se permiten letras en el nombre", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt_codigo_Validated(object sender, EventArgs e)
+        {
+            if (txt_codigo.Text.Trim() == "")
+            {
+                epError.SetError(txt_codigo, "Ingrese el Codigo....");
+                txt_codigo.Focus();
+
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
+        private void Titulolibro_Validated(object sender, EventArgs e)
+        {
+            if (Titulolibro.Text.Trim() == "")
+            {
+                epError.SetError(Titulolibro, "Ingrese el Titulo....");
+                Titulolibro.Focus();
+
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
+        private void Autorlibro_Validated(object sender, EventArgs e)
+        {
+            if (Autorlibro.Text.Trim() == "")
+            {
+                epError.SetError(Autorlibro, "Ingrese el Autor....");
+                Autorlibro.Focus();
+
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
+        private void preciolibro_Validated(object sender, EventArgs e)
+        {
+            if (preciolibro.Text.Trim() == "")
+            {
+                epError.SetError(preciolibro, "Ingrese el Precio....");
+                preciolibro.Focus();
+
+            }
+            else
+            {
+                epError.Clear();
+            }
         }
     }
 }

@@ -21,6 +21,7 @@ namespace OfficeHouse
         }
         MySqlConnection CDB = Cconexion.conex();
        
+
         public void llenartabla()
         {
             string consulta = "select * from  empleado";
@@ -199,6 +200,48 @@ namespace OfficeHouse
                 MessageBox.Show("Solo se permiten letras en el apellido", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
+            }
+        }
+
+        private void codigo_usuario_Validated(object sender, EventArgs e)
+        {
+            if (codigo_usuario.Text.Trim() == "")
+            {
+                epError.SetError(codigo_usuario, "Ingrese el codigo....");
+                codigo_usuario.Focus();
+
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
+        private void nombre_usuario_Validated(object sender, EventArgs e)
+        {
+            if (nombre_usuario.Text.Trim() == "")
+            {
+                epError.SetError(nombre_usuario, "Ingrese su Nombre....");
+                nombre_usuario.Focus();
+
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
+        private void apellido_usuario_Validated(object sender, EventArgs e)
+        {
+            if (apellido_usuario.Text.Trim() == "")
+            {
+                epError.SetError(apellido_usuario, "Ingrese su menbresia....");
+                apellido_usuario.Focus();
+
+            }
+            else
+            {
+                epError.Clear();
             }
         }
     }
