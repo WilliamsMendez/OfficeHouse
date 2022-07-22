@@ -18,13 +18,25 @@ namespace OfficeHouse
         public Pagos()
         {
             InitializeComponent();
-           
         }
-
 
         private void btnpagar_Click(object sender, EventArgs e)
         {
-           
+            int cant;
+            double precio, subt, Isv, total;
+
+            cant = int.Parse(this.txt_cantidadPago.Text);
+            precio = double.Parse(this.txt_precioPago.Text);
+
+            subt = cant * precio;
+            Isv = subt * 0.15;
+            total = subt + Isv;
+
+
+            this.txt_precioPago.Text = precio.ToString();
+            this.txt_subtotal.Text = subt.ToString();
+            this.txt_isv.Text = Isv.ToString();
+            this.txt_total.Text = total.ToString();
         }
 
         private void btnatras_Click_1(object sender, EventArgs e)
@@ -49,29 +61,21 @@ namespace OfficeHouse
         {
 
         }
-        public void datos()
-        {
-            
-        }
+
         private void Pagos_Load(object sender, EventArgs e)
         {
             txt_Num_Membresia.Text = tipousuariopublico.numeromem;
             txt_Descripcion.Text = "Titulo="+ datospago.tituloalquiler+"   Autor=" +datospago.autoralquiler +"   Cantidad de libros= " +datospago.cantidadlibro + "";
-            int cant;
-            double precio, subt, Isv, total;
-                       
-            precio= datospago.precio;
-            cant = datospago.cantidadlibro; 
-            
-            
+        }
 
-            subt = cant * precio;
-            Isv = subt * 0.15;
-            total = subt + Isv;
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
-            this.txt_subtotal.Text = subt.ToString();
-            this.txt_isv.Text = Isv.ToString();
-            this.txt_total.Text = total.ToString();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
