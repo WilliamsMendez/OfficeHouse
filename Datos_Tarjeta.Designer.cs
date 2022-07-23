@@ -119,7 +119,6 @@ namespace OfficeHouse
             this.numero_atras_tarjeta.Name = "numero_atras_tarjeta";
             this.numero_atras_tarjeta.Size = new System.Drawing.Size(93, 20);
             this.numero_atras_tarjeta.TabIndex = 152;
-            this.numero_atras_tarjeta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero_atras_tarjeta_KeyPress);
             // 
             // nombre_propietario_tarjeta
             // 
@@ -127,8 +126,6 @@ namespace OfficeHouse
             this.nombre_propietario_tarjeta.Name = "nombre_propietario_tarjeta";
             this.nombre_propietario_tarjeta.Size = new System.Drawing.Size(276, 20);
             this.nombre_propietario_tarjeta.TabIndex = 150;
-            this.nombre_propietario_tarjeta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombre_propietario_tarjeta_KeyPress);
-            this.nombre_propietario_tarjeta.Validating += new System.ComponentModel.CancelEventHandler(this.nombre_propietario_tarjeta_Validating);
             // 
             // label7
             // 
@@ -180,8 +177,6 @@ namespace OfficeHouse
             this.numero_tarjeta.Name = "numero_tarjeta";
             this.numero_tarjeta.Size = new System.Drawing.Size(276, 20);
             this.numero_tarjeta.TabIndex = 144;
-            this.numero_tarjeta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero_tarjeta_KeyPress);
-            this.numero_tarjeta.Validating += new System.ComponentModel.CancelEventHandler(this.numero_tarjeta_Validating);
             // 
             // label2
             // 
@@ -212,7 +207,7 @@ namespace OfficeHouse
             this.Controls.Add(this.label3);
             this.Controls.Add(this.numero_tarjeta);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Datos_Tarjeta";
             this.Text = "Datos_Tarjeta";
             this.panel2.ResumeLayout(false);
