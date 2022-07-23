@@ -51,6 +51,79 @@ namespace OfficeHouse
             {
                 MessageBox.Show(i.Message + i.StackTrace);
             }
+
+            //Datos de validacion
+            if(ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show(nombre_propietario_tarjeta.Text, "Menssage", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
+
+        }
+
+        private void numero_tarjeta_Validating(object sender, CancelEventArgs e)
+        {
+            
+        }
+
+        private void nombre_propietario_tarjeta_Validating(object sender, CancelEventArgs e)
+        {
+        }
+
+        private void numero_tarjeta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("SOLO SE PERMITEN NUMEROS", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void nombre_propietario_tarjeta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;   
+            }
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("SOLO SE PERMITEN LETRAS", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void numero_atras_tarjeta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("SOLO SE PERMITEN NUMEROS", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
