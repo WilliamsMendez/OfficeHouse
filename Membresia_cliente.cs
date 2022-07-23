@@ -34,7 +34,7 @@ namespace OfficeHouse
             MySqlDataAdapter adapter = new MySqlDataAdapter(codigo);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
-            tipousuariopublico.numeromem = dt.Rows[0][0].ToString();
+            
             if (dt.Rows.Count == 1)
             {
                 if (pantallaav.av == 1)

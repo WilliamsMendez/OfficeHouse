@@ -33,7 +33,7 @@ namespace OfficeHouse
             MySqlDataAdapter adapter = new MySqlDataAdapter(codigo);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
-            tipousuariopublico.tipousuario = dt.Rows[0][2].ToString();
+           
 
 
             if (dt.Rows.Count == 1)
@@ -44,7 +44,7 @@ namespace OfficeHouse
                     this.Hide();
                     Menu_Gerente frm = new Menu_Gerente();
                     frm.Show();
-
+                    tipousuariopublico.tipousuario = dt.Rows[0][2].ToString();
                 }
                 else
                 {
@@ -52,6 +52,7 @@ namespace OfficeHouse
                     this.Hide();
                     Menu_Empleado frm = new Menu_Empleado();
                     frm.Show();
+                    tipousuariopublico.tipousuario = dt.Rows[0][1].ToString();
                 }
             }
             else
