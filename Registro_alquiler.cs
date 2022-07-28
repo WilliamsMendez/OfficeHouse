@@ -22,7 +22,7 @@ namespace OfficeHouse
 
         public void llenartabla()
         {
-            string consulta = "select * from alquiler";
+            string consulta = "Select id_alquiler, titulo_libro, precio, cantidad, fecha_alquiler from alquiler inner join libro on id_alquiler = id_libro";
             MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
             DataTable dt = new DataTable();
             adaptador.Fill(dt);
@@ -30,7 +30,7 @@ namespace OfficeHouse
         }
         private void Registro_alquiler_Load(object sender, EventArgs e)
         {
-            string consulta = "select * from alquiler";
+            string consulta = "Select id_alquiler, titulo_libro, precio, alquiler.cantidad alquiler.fecha_alquiler from alquiler inner join libro on alquiler.id_alquiler = libro.id_libro";
             MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
             DataTable dt = new DataTable();
             adaptador.Fill(dt);
@@ -150,6 +150,8 @@ namespace OfficeHouse
 
         }
 
+
+
         private void codigo_alquiler_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
@@ -173,6 +175,11 @@ namespace OfficeHouse
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void dgv_alquiler_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -62,7 +62,7 @@ namespace OfficeHouse
             this.panel2.BackgroundImage = global::OfficeHouse.Properties.Resources._0C1231;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(-4, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1065, 97);
             this.panel2.TabIndex = 151;
@@ -88,7 +88,7 @@ namespace OfficeHouse
             this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button2.Location = new System.Drawing.Point(728, 146);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 60);
             this.button2.TabIndex = 203;
@@ -103,7 +103,7 @@ namespace OfficeHouse
             this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(575, 250);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 60);
             this.button1.TabIndex = 202;
@@ -118,7 +118,7 @@ namespace OfficeHouse
             this.btnatras.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnatras.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnatras.Location = new System.Drawing.Point(643, 336);
-            this.btnatras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnatras.Margin = new System.Windows.Forms.Padding(4);
             this.btnatras.Name = "btnatras";
             this.btnatras.Size = new System.Drawing.Size(124, 60);
             this.btnatras.TabIndex = 200;
@@ -193,7 +193,7 @@ namespace OfficeHouse
             this.button3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button3.Location = new System.Drawing.Point(728, 250);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(124, 60);
             this.button3.TabIndex = 206;
@@ -216,9 +216,9 @@ namespace OfficeHouse
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(13, 105);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(555, 311);
             this.groupBox1.TabIndex = 208;
             this.groupBox1.TabStop = false;
@@ -229,7 +229,7 @@ namespace OfficeHouse
             this.titulo_alquiler.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.titulo_alquiler.FormattingEnabled = true;
             this.titulo_alquiler.Location = new System.Drawing.Point(277, 91);
-            this.titulo_alquiler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.titulo_alquiler.Margin = new System.Windows.Forms.Padding(4);
             this.titulo_alquiler.Name = "titulo_alquiler";
             this.titulo_alquiler.Size = new System.Drawing.Size(244, 32);
             this.titulo_alquiler.TabIndex = 216;
@@ -240,7 +240,7 @@ namespace OfficeHouse
             this.fechalquiler.CustomFormat = "yyyy-MM-dd ";
             this.fechalquiler.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.fechalquiler.Location = new System.Drawing.Point(277, 196);
-            this.fechalquiler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fechalquiler.Margin = new System.Windows.Forms.Padding(4);
             this.fechalquiler.Name = "fechalquiler";
             this.fechalquiler.Size = new System.Drawing.Size(244, 32);
             this.fechalquiler.TabIndex = 214;
@@ -248,7 +248,7 @@ namespace OfficeHouse
             // cantidad_alquiler
             // 
             this.cantidad_alquiler.Location = new System.Drawing.Point(277, 258);
-            this.cantidad_alquiler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cantidad_alquiler.Margin = new System.Windows.Forms.Padding(4);
             this.cantidad_alquiler.Name = "cantidad_alquiler";
             this.cantidad_alquiler.Size = new System.Drawing.Size(244, 32);
             this.cantidad_alquiler.TabIndex = 213;
@@ -258,7 +258,7 @@ namespace OfficeHouse
             // codigo_alquiler
             // 
             this.codigo_alquiler.Location = new System.Drawing.Point(277, 39);
-            this.codigo_alquiler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.codigo_alquiler.Margin = new System.Windows.Forms.Padding(4);
             this.codigo_alquiler.Name = "codigo_alquiler";
             this.codigo_alquiler.Size = new System.Drawing.Size(244, 32);
             this.codigo_alquiler.TabIndex = 210;
@@ -269,7 +269,7 @@ namespace OfficeHouse
             // 
             this.autor_alquier.Enabled = false;
             this.autor_alquier.Location = new System.Drawing.Point(277, 144);
-            this.autor_alquier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.autor_alquier.Margin = new System.Windows.Forms.Padding(4);
             this.autor_alquier.Name = "autor_alquier";
             this.autor_alquier.Size = new System.Drawing.Size(244, 32);
             this.autor_alquier.TabIndex = 212;
@@ -283,7 +283,7 @@ namespace OfficeHouse
             this.dgv_alquiler.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_alquiler.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgv_alquiler.Location = new System.Drawing.Point(13, 464);
-            this.dgv_alquiler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_alquiler.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_alquiler.MultiSelect = false;
             this.dgv_alquiler.Name = "dgv_alquiler";
             this.dgv_alquiler.ReadOnly = true;
@@ -292,6 +292,7 @@ namespace OfficeHouse
             this.dgv_alquiler.Size = new System.Drawing.Size(1008, 210);
             this.dgv_alquiler.TabIndex = 209;
             this.dgv_alquiler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_libro_CellClick);
+            this.dgv_alquiler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_alquiler_CellContentClick);
             // 
             // btnRegistrar
             // 
@@ -300,7 +301,7 @@ namespace OfficeHouse
             this.btnRegistrar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnRegistrar.Location = new System.Drawing.Point(576, 146);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(124, 60);
             this.btnRegistrar.TabIndex = 210;
