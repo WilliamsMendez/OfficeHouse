@@ -94,5 +94,10 @@ namespace OfficeHouse
             MessageBox.Show("Membresia:" + textBox1.Text);
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

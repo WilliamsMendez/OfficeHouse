@@ -181,6 +181,43 @@ namespace OfficeHouse
 
         }
 
+        public void validaciones()
+        {
+            if (txt_codigo.Text.Trim() == "")
+            {
+                epError.SetError(txt_codigo, "Ingrese el codigo....");
+                txt_codigo.Focus();
+                MessageBox.Show("Ingrese el codigo....");
+            }
+            else
+                if (Titulolibro.Text.Trim() == "")
+            {
+                MessageBox.Show("Ingrese el titulo....");
+                epError.SetError(Titulolibro, "Ingrese el Titulo....");
+                Titulolibro.Focus();
+
+            }
+            else
+                if (Autorlibro.Text.Trim() == "")
+            {
+                MessageBox.Show("Ingrese el autor");
+                epError.SetError(Autorlibro, "Ingrese el autor....");
+                Autorlibro.Focus();
+
+            }
+            else
+                if (preciolibro.Text.Trim() == "")
+            {
+                MessageBox.Show("Ingrese el precio");
+                epError.SetError(preciolibro, "Ingrese el precio");
+                preciolibro.Focus();
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
         private void preciolibro_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))

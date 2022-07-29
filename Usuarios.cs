@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using OfficeHouse.clases;
+using System;
+using System.Data;
+using System.Windows.Forms;
 
 namespace OfficeHouse
 {
@@ -20,7 +14,37 @@ namespace OfficeHouse
             puesto_empleado();
         }
         MySqlConnection CDB = Cconexion.conex();
-       
+
+        public void validaciones()
+        {
+            if (codigo_usuario.Text.Trim() == "")
+            {
+                epError.SetError(codigo_usuario, "Ingrese el codigo....");
+                codigo_usuario.Focus();
+                MessageBox.Show("Ingrese el codigo....");
+            }
+            else
+                if (nombre_usuario.Text.Trim() == "")
+            {
+                MessageBox.Show("Ingrese su Nombre....");
+                epError.SetError(nombre_usuario, "Ingrese su Nombre....");
+                nombre_usuario.Focus();
+
+            }
+            else
+                if (apellido_usuario.Text.Trim() == "")
+            {
+                MessageBox.Show("Ingrese su apellido");
+                epError.SetError(apellido_usuario, "Ingrese su menbresia....");
+                apellido_usuario.Focus();
+
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
 
         public void llenartabla()
         {
@@ -42,10 +66,13 @@ namespace OfficeHouse
 
         }
 
+        
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             //ingreso en base de datos
-            if(puesto_usuario.Text == "Cliente")
+            validaciones();
+            if (puesto_usuario.Text == "Cliente")
             {
                 try
                 {
@@ -113,6 +140,7 @@ namespace OfficeHouse
 
         private void btnmodificar_Click(object sender, EventArgs e)
         {
+            validaciones();
             try
             {
                 CDB.Open();
@@ -185,7 +213,7 @@ namespace OfficeHouse
 
         private void nombre_usuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
                 MessageBox.Show("Solo se permiten letras en el nombre", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
@@ -195,7 +223,7 @@ namespace OfficeHouse
 
         private void apellido_usuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
                 MessageBox.Show("Solo se permiten letras en el apellido", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
@@ -244,5 +272,42 @@ namespace OfficeHouse
                 epError.Clear();
             }
         }
+
+        
+
+        private void usuario_usuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usuario_usuario_Validated(object sender, EventArgs e)
+        {
+            if (usuario_usuario.Text.Trim() == "")
+            {
+                epError.SetError(usuario_usuario, "Ingrese su Usuario....");
+                usuario_usuario.Focus();
+
+            }
+            else
+            {
+                epError.Clear();
+            }
+        }
+
+        private void clave_usuario_Validated(object sender, EventArgs e)
+        {
+            if (clave_usuario.Text.Trim() == "")
+            {
+                epError.SetError(clave_usuario, "Ingrese su Clave....");
+                clave_usuario.Focus();
+
+            }
+            else
+            {
+                epError.Clear();
+            }
+        
+        }
     }
-}
+    }
+
