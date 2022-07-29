@@ -49,13 +49,20 @@ namespace OfficeHouse
         {
             CDB.Open();
 
-            string consulta = "delete from alquiler where id_alquiler=" + codigo_alquiler.Text + "";
-            MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
-            MySqlCommand comando = new MySqlCommand(consulta, CDB);
-            comando.ExecuteNonQuery();
-            llenartabla();
-            CDB.Close();
-            MessageBox.Show("Datos eliminados correctamente");
+            try
+            {
+                string consulta = "delete from alquiler where id_alquiler=" + codigo_alquiler.Text + "";
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
+                MySqlCommand comando = new MySqlCommand(consulta, CDB);
+                comando.ExecuteNonQuery();
+                llenartabla();
+                CDB.Close();
+                MessageBox.Show("Datos eliminados correctamente");
+            }
+            catch (Exception i)
+            {
+                MessageBox.Show(i.Message);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -84,7 +91,7 @@ namespace OfficeHouse
                 CDB.Open();
                 MySqlCommand comando = new MySqlCommand();
                 comando.Connection = CDB;
-                comando.CommandText = ("Insert into alquiler(id_alquiler, cantidad, fecha_alquiler) values('" + codigo_alquiler.Text + "', '" + float.Parse(cantidad_alquiler.Text) + "','" + fechalquiler.Value.ToString("yyyy/MM/dd") + "');");
+                comando.CommandText = ("Insert into alquiler(cantidad, fecha_alquiler) values('" + float.Parse(cantidad_alquiler.Text) + "','" + fechalquiler.Value.ToString("yyyy/MM/dd") + "');");
                 comando.ExecuteNonQuery();
                 CDB.Close();
                 llenartabla();

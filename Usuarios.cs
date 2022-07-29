@@ -70,7 +70,7 @@ namespace OfficeHouse
                     CDB.Open();
                     MySqlCommand comando = new MySqlCommand();
                     comando.Connection = CDB;
-                    comando.CommandText = ("Insert into empleado(id_empleado, nombre_empleado, apellido_empleado, usuario_empleado, clave_empleado, fecha_contratacion, fecha_nacimiento_empleado, puesto_empleado  ) values('" + codigo_usuario.Text + "', '" + nombre_usuario.Text + "', '" + apellido_usuario.Text + "', '" + usuario_usuario.Text + "', '" + clave_usuario.Text + "', '" + dtp_contratacion.Value.ToString("yyyy/MM/dd") + "','" + dtp_nacimiento.Value.ToString("yyyy/MM/dd") + "', '" + puesto_usuario.Text + "');");
+                    comando.CommandText = ("Insert into empleado(nombre_empleado, apellido_empleado, usuario_empleado, clave_empleado, fecha_contratacion, fecha_nacimiento_empleado, puesto_empleado  ) values( '" + nombre_usuario.Text + "', '" + apellido_usuario.Text + "', '" + usuario_usuario.Text + "', '" + clave_usuario.Text + "', '" + dtp_contratacion.Value.ToString("yyyy/MM/dd") + "','" + dtp_nacimiento.Value.ToString("yyyy/MM/dd") + "', '" + puesto_usuario.Text + "');");
                     comando.ExecuteNonQuery();
                     llenartabla();
                     CDB.Close();
