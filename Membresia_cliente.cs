@@ -39,13 +39,12 @@ namespace OfficeHouse
             {
                 if (pantallaav.av == 1)
                 {
-                    this.Hide();
+                    
                     MenuAlquiler frm = new MenuAlquiler();
                     frm.Show();
                 }
                 else
                 {
-                    this.Hide();
                     MenuDevolucion frm = new MenuDevolucion();
                     frm.Show();
                 }

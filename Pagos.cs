@@ -73,5 +73,10 @@ namespace OfficeHouse
             this.txt_isv.Text = Isv.ToString();
             this.txt_total.Text = total.ToString();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

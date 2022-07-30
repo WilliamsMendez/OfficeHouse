@@ -54,9 +54,9 @@ namespace OfficeHouse
             this.btnatras = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.imgbarra = new System.Windows.Forms.PictureBox();
-            this.Autorlibro = new System.Windows.Forms.TextBox();
             this.Editoriallibro = new System.Windows.Forms.ComboBox();
             this.epError = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Autorlibro = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_libro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgbarra)).BeginInit();
@@ -68,9 +68,12 @@ namespace OfficeHouse
             this.fechaingresolibro.CustomFormat = "yyyy-MM-dd ";
             this.fechaingresolibro.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.fechaingresolibro.Location = new System.Drawing.Point(468, 189);
+            this.fechaingresolibro.MaxDate = new System.DateTime(2022, 7, 29, 0, 0, 0, 0);
+            this.fechaingresolibro.MinDate = new System.DateTime(2022, 7, 29, 0, 0, 0, 0);
             this.fechaingresolibro.Name = "fechaingresolibro";
             this.fechaingresolibro.Size = new System.Drawing.Size(201, 20);
             this.fechaingresolibro.TabIndex = 138;
+            this.fechaingresolibro.Value = new System.DateTime(2022, 7, 29, 0, 0, 0, 0);
             // 
             // label9
             // 
@@ -86,6 +89,7 @@ namespace OfficeHouse
             // preciolibro
             // 
             this.preciolibro.Location = new System.Drawing.Point(468, 146);
+            this.preciolibro.MaxLength = 7;
             this.preciolibro.Name = "preciolibro";
             this.preciolibro.Size = new System.Drawing.Size(201, 20);
             this.preciolibro.TabIndex = 136;
@@ -195,6 +199,7 @@ namespace OfficeHouse
             // Titulolibro
             // 
             this.Titulolibro.Location = new System.Drawing.Point(129, 150);
+            this.Titulolibro.MaxLength = 225;
             this.Titulolibro.Name = "Titulolibro";
             this.Titulolibro.Size = new System.Drawing.Size(184, 20);
             this.Titulolibro.TabIndex = 125;
@@ -213,8 +218,8 @@ namespace OfficeHouse
             // 
             // txt_codigo
             // 
-            this.txt_codigo.Enabled = false;
             this.txt_codigo.Location = new System.Drawing.Point(129, 107);
+            this.txt_codigo.MaxLength = 4;
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(184, 20);
             this.txt_codigo.TabIndex = 123;
@@ -310,21 +315,12 @@ namespace OfficeHouse
             // imgbarra
             // 
             this.imgbarra.Location = new System.Drawing.Point(572, 213);
-            this.imgbarra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.imgbarra.Margin = new System.Windows.Forms.Padding(2);
             this.imgbarra.Name = "imgbarra";
             this.imgbarra.Size = new System.Drawing.Size(208, 127);
             this.imgbarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgbarra.TabIndex = 206;
             this.imgbarra.TabStop = false;
-            // 
-            // Autorlibro
-            // 
-            this.Autorlibro.Location = new System.Drawing.Point(129, 193);
-            this.Autorlibro.Name = "Autorlibro";
-            this.Autorlibro.Size = new System.Drawing.Size(184, 20);
-            this.Autorlibro.TabIndex = 132;
-            this.Autorlibro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Autorlibro_KeyPress);
-            this.Autorlibro.Validated += new System.EventHandler(this.Autorlibro_Validated);
             // 
             // Editoriallibro
             // 
@@ -339,12 +335,22 @@ namespace OfficeHouse
             // 
             this.epError.ContainerControl = this;
             // 
+            // Autorlibro
+            // 
+            this.Autorlibro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Autorlibro.FormattingEnabled = true;
+            this.Autorlibro.Location = new System.Drawing.Point(129, 191);
+            this.Autorlibro.Name = "Autorlibro";
+            this.Autorlibro.Size = new System.Drawing.Size(184, 21);
+            this.Autorlibro.TabIndex = 209;
+            // 
             // Registro_Libro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::OfficeHouse.Properties.Resources.CCB38D;
             this.ClientSize = new System.Drawing.Size(824, 542);
+            this.Controls.Add(this.Autorlibro);
             this.Controls.Add(this.Editoriallibro);
             this.Controls.Add(this.imgbarra);
             this.Controls.Add(this.btnmodificar);
@@ -357,7 +363,6 @@ namespace OfficeHouse
             this.Controls.Add(this.preciolibro);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.Autorlibro);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Categorialibro);
             this.Controls.Add(this.label4);
@@ -368,7 +373,7 @@ namespace OfficeHouse
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_codigo);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Registro_Libro";
             this.Text = "Registro_Libro";
             this.Load += new System.EventHandler(this.Registro_Libro_Load);
@@ -406,8 +411,8 @@ namespace OfficeHouse
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.PictureBox imgbarra;
         public System.Windows.Forms.TextBox txt_codigo;
-        private System.Windows.Forms.TextBox Autorlibro;
         private System.Windows.Forms.ComboBox Editoriallibro;
         private System.Windows.Forms.ErrorProvider epError;
+        private System.Windows.Forms.ComboBox Autorlibro;
     }
 }

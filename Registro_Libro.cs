@@ -63,6 +63,10 @@ namespace OfficeHouse
                 llenartabla();
                 CDB.Close();
                 MessageBox.Show("Datos ingresados correctamente");
+                Titulolibro.Text = "";
+                preciolibro.Text = "";
+                txt_codigo.Text = "";
+
             }
             catch (Exception i)
             {
@@ -91,6 +95,9 @@ namespace OfficeHouse
                 MessageBox.Show("Datos modificados correctamente");
 
                 CDB.Close();
+                Titulolibro.Text = "";
+                preciolibro.Text = "";
+                txt_codigo.Text = "";
             }
             catch (Exception i)
             {
@@ -106,6 +113,8 @@ namespace OfficeHouse
             adaptador.Fill(dt);
             dgv_libro.DataSource = dt;
             cbCategoria_libro();
+
+            
         }
 
         private void dgv_libro_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -132,6 +141,9 @@ namespace OfficeHouse
             llenartabla();
             CDB.Close();
             MessageBox.Show("Datos eliminados correctamente");
+            Titulolibro.Text = "";
+            preciolibro.Text = "";
+            txt_codigo.Text = "";
         }
 
         private void cbCategoria_libro()
@@ -159,6 +171,14 @@ namespace OfficeHouse
             da2.Fill(dtedit);
             Editoriallibro.DisplayMember = "editorial";
             Editoriallibro.DataSource = dtedit;
+
+            string consulautor = "SELECT autorcol FROM autor";
+            MySqlCommand comandoautor = new MySqlCommand(consulautor, CDB);
+            MySqlDataAdapter da3 = new MySqlDataAdapter(comandoautor);
+            DataTable dtautor = new DataTable();
+            da3.Fill(dtautor);
+            Autorlibro.DisplayMember = "autorcol";
+            Autorlibro.DataSource = dtautor;
         }
 
         private void dgv_libro_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -220,7 +240,7 @@ namespace OfficeHouse
 
         private void preciolibro_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            if ((e.KeyChar >= 32 && e.KeyChar <= 45) || (e.KeyChar == 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
                 MessageBox.Show("Solo se permiten numeros en el codigo", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
@@ -230,7 +250,7 @@ namespace OfficeHouse
 
         private void Autorlibro_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
                 MessageBox.Show("Solo se permiten letras en el nombre", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
@@ -292,6 +312,11 @@ namespace OfficeHouse
             {
                 epError.Clear();
             }
+        }
+
+        private void Autorlibro_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

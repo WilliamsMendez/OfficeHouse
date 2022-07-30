@@ -225,10 +225,13 @@ namespace OfficeHouse
             // 
             this.fechalquiler.CustomFormat = "yyyy-MM-dd ";
             this.fechalquiler.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fechalquiler.Location = new System.Drawing.Point(208, 159);
+            this.fechalquiler.Location = new System.Drawing.Point(208, 161);
+            this.fechalquiler.MaxDate = new System.DateTime(2022, 7, 29, 0, 0, 0, 0);
+            this.fechalquiler.MinDate = new System.DateTime(2022, 7, 29, 0, 0, 0, 0);
             this.fechalquiler.Name = "fechalquiler";
             this.fechalquiler.Size = new System.Drawing.Size(184, 27);
             this.fechalquiler.TabIndex = 214;
+            this.fechalquiler.Value = new System.DateTime(2022, 7, 29, 0, 0, 0, 0);
             // 
             // cantidad_alquiler
             // 
