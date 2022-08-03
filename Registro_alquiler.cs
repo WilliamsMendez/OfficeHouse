@@ -22,7 +22,7 @@ namespace OfficeHouse
 
         public void llenartabla()
         {
-            string consulta = "Select id_alquiler, titulo_libro, precio, cantidad, fecha_alquiler from alquiler inner join libro on id_alquiler = id_libro";
+            string consulta = ""; //"Select id_alquiler, titulo_libro, precio, cantidad, fecha_alquiler from alquiler inner join libro on id_alquiler = id_libro"
             MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
             DataTable dt = new DataTable();
             adaptador.Fill(dt);
@@ -30,10 +30,10 @@ namespace OfficeHouse
         }
         private void Registro_alquiler_Load(object sender, EventArgs e)
         {
-            string consulta = "Select id_alquiler, titulo_libro, precio, alquiler.cantidad alquiler.fecha_alquiler from alquiler inner join libro on alquiler.id_alquiler = libro.id_libro";
-            MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
+            string consulta = ""; //"Select id_alquiler, titulo_libro, precio, alquiler.cantidad alquiler.fecha_alquiler from alquiler inner join libro on alquiler.id_alquiler = libro.id_libro"
+            //MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, CDB);
             DataTable dt = new DataTable();
-            adaptador.Fill(dt);
+            //adaptador.Fill(dt);
             dgv_alquiler.DataSource = dt;
             consultalibro();
         }
