@@ -35,7 +35,6 @@ namespace OfficeHouse
             this.btnregistro = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnGregistro = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +59,7 @@ namespace OfficeHouse
             this.btncerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btncerrar.BackgroundImage")));
             this.btncerrar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncerrar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btncerrar.Location = new System.Drawing.Point(127, 375);
+            this.btncerrar.Location = new System.Drawing.Point(127, 300);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(150, 52);
             this.btncerrar.TabIndex = 128;
@@ -108,34 +107,19 @@ namespace OfficeHouse
             this.label3.Text = "Menu Alquiler";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnGregistro
-            // 
-            this.btnGregistro.BackColor = System.Drawing.Color.Transparent;
-            this.btnGregistro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGregistro.BackgroundImage")));
-            this.btnGregistro.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGregistro.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGregistro.Location = new System.Drawing.Point(127, 303);
-            this.btnGregistro.Name = "btnGregistro";
-            this.btnGregistro.Size = new System.Drawing.Size(150, 52);
-            this.btnGregistro.TabIndex = 130;
-            this.btnGregistro.Text = "Historial";
-            this.btnGregistro.UseVisualStyleBackColor = false;
-            this.btnGregistro.Click += new System.EventHandler(this.btnGregistro_Click);
-            // 
             // MenuAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::OfficeHouse.Properties.Resources.CCB38D;
             this.ClientSize = new System.Drawing.Size(386, 505);
-            this.Controls.Add(this.btnGregistro);
             this.Controls.Add(this.btnconsultar);
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.btnregistro);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuAlquiler";
-            this.Text = "Form1";
+            this.Text = "Menu Alquiler";
             this.Load += new System.EventHandler(this.MenuAlquiler_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -149,6 +133,5 @@ namespace OfficeHouse
         private System.Windows.Forms.Button btnregistro;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnGregistro;
     }
 }

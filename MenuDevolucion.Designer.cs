@@ -35,7 +35,6 @@ namespace OfficeHouse
             this.btnregistro = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnHistorial = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +59,7 @@ namespace OfficeHouse
             this.btncerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btncerrar.BackgroundImage")));
             this.btncerrar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncerrar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btncerrar.Location = new System.Drawing.Point(111, 369);
+            this.btncerrar.Location = new System.Drawing.Point(111, 300);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(150, 52);
             this.btncerrar.TabIndex = 133;
@@ -109,27 +108,12 @@ namespace OfficeHouse
             this.label3.Text = "Menu Devolución";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnHistorial
-            // 
-            this.btnHistorial.BackColor = System.Drawing.Color.Transparent;
-            this.btnHistorial.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHistorial.BackgroundImage")));
-            this.btnHistorial.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorial.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnHistorial.Location = new System.Drawing.Point(111, 295);
-            this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(150, 52);
-            this.btnHistorial.TabIndex = 136;
-            this.btnHistorial.Text = "Historial";
-            this.btnHistorial.UseVisualStyleBackColor = false;
-            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
-            // 
             // MenuDevolucion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::OfficeHouse.Properties.Resources.CCB38D;
             this.ClientSize = new System.Drawing.Size(370, 479);
-            this.Controls.Add(this.btnHistorial);
             this.Controls.Add(this.btnconsultar);
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.btnregistro);
@@ -150,6 +134,5 @@ namespace OfficeHouse
         private System.Windows.Forms.Button btnregistro;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnHistorial;
     }
 }

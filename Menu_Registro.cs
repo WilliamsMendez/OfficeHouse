@@ -58,7 +58,7 @@ namespace OfficeHouse
 
         private void Menu_Registro_Load(object sender, EventArgs e)
         {
-            btnGregistro.Enabled = false;
+            
         }
     }
 }

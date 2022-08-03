@@ -65,7 +65,7 @@ namespace OfficeHouse
 
         private void MenuDevolucion_Load(object sender, EventArgs e)
         {
-            btnHistorial.Enabled = false;
+            
         }
     }
 }

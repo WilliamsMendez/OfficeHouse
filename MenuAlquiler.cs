@@ -20,7 +20,7 @@ namespace OfficeHouse
 
         private void MenuAlquiler_Load(object sender, EventArgs e)
         {
-            btnGregistro.Enabled = false;
+            
         }
 
         private void btnregistro_Click(object sender, EventArgs e)
