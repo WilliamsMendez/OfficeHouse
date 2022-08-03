@@ -36,9 +36,9 @@ namespace OfficeHouse
 
         private void btnHistorial_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Historial_Devolucion frm = new Historial_Devolucion();
-            frm.Show();
+            //this.Hide();
+            //Historial_Devolucion frm = new Historial_Devolucion();
+            //frm.Show();
         }
 
         private void btncerrar_Click(object sender, EventArgs e)
@@ -56,6 +56,16 @@ namespace OfficeHouse
                 Menu_Empleado frm = new Menu_Empleado();
                 frm.Show();
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void MenuDevolucion_Load(object sender, EventArgs e)
+        {
+            btnHistorial.Enabled = false;
         }
     }
 }

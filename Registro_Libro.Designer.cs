@@ -166,11 +166,11 @@ namespace OfficeHouse
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(203, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(300, 36);
+            this.label3.Size = new System.Drawing.Size(265, 37);
             this.label3.TabIndex = 10;
             this.label3.Text = "Registro de libros";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -203,6 +203,7 @@ namespace OfficeHouse
             this.Titulolibro.Name = "Titulolibro";
             this.Titulolibro.Size = new System.Drawing.Size(184, 20);
             this.Titulolibro.TabIndex = 125;
+            this.Titulolibro.TextChanged += new System.EventHandler(this.Titulolibro_TextChanged);
             this.Titulolibro.Validated += new System.EventHandler(this.Titulolibro_Validated);
             // 
             // label2

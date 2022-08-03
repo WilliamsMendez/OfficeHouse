@@ -318,6 +318,11 @@ namespace OfficeHouse
         {
 
         }
+
+        private void Titulolibro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

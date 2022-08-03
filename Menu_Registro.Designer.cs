@@ -30,29 +30,14 @@ namespace OfficeHouse
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Registro));
-            this.btnGregistro = new System.Windows.Forms.Button();
             this.btnconsultar = new System.Windows.Forms.Button();
             this.btncerrar = new System.Windows.Forms.Button();
             this.btnregistro = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnGregistro = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnGregistro
-            // 
-            this.btnGregistro.BackColor = System.Drawing.Color.Transparent;
-            this.btnGregistro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGregistro.BackgroundImage")));
-            this.btnGregistro.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGregistro.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGregistro.Location = new System.Drawing.Point(167, 356);
-            this.btnGregistro.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGregistro.Name = "btnGregistro";
-            this.btnGregistro.Size = new System.Drawing.Size(200, 64);
-            this.btnGregistro.TabIndex = 135;
-            this.btnGregistro.Text = "Historial";
-            this.btnGregistro.UseVisualStyleBackColor = false;
-            this.btnGregistro.Click += new System.EventHandler(this.btnGregistro_Click);
             // 
             // btnconsultar
             // 
@@ -61,10 +46,9 @@ namespace OfficeHouse
             this.btnconsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnconsultar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnconsultar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnconsultar.Location = new System.Drawing.Point(167, 262);
-            this.btnconsultar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnconsultar.Location = new System.Drawing.Point(125, 213);
             this.btnconsultar.Name = "btnconsultar";
-            this.btnconsultar.Size = new System.Drawing.Size(200, 64);
+            this.btnconsultar.Size = new System.Drawing.Size(150, 52);
             this.btnconsultar.TabIndex = 134;
             this.btnconsultar.Text = "Consultar";
             this.btnconsultar.UseVisualStyleBackColor = false;
@@ -76,10 +60,9 @@ namespace OfficeHouse
             this.btncerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btncerrar.BackgroundImage")));
             this.btncerrar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncerrar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btncerrar.Location = new System.Drawing.Point(167, 440);
-            this.btncerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btncerrar.Location = new System.Drawing.Point(125, 358);
             this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(200, 64);
+            this.btncerrar.Size = new System.Drawing.Size(150, 52);
             this.btncerrar.TabIndex = 133;
             this.btncerrar.Text = "Volver";
             this.btncerrar.UseVisualStyleBackColor = false;
@@ -92,10 +75,9 @@ namespace OfficeHouse
             this.btnregistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnregistro.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistro.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnregistro.Location = new System.Drawing.Point(167, 168);
-            this.btnregistro.Margin = new System.Windows.Forms.Padding(4);
+            this.btnregistro.Location = new System.Drawing.Point(125, 136);
             this.btnregistro.Name = "btnregistro";
-            this.btnregistro.Size = new System.Drawing.Size(200, 64);
+            this.btnregistro.Size = new System.Drawing.Size(150, 52);
             this.btnregistro.TabIndex = 132;
             this.btnregistro.Text = "Registro";
             this.btnregistro.UseVisualStyleBackColor = false;
@@ -108,39 +90,53 @@ namespace OfficeHouse
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::OfficeHouse.Properties.Resources._0C1231;
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(-4, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(-3, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(558, 115);
+            this.panel1.Size = new System.Drawing.Size(418, 93);
             this.panel1.TabIndex = 131;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(72, 29);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(54, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(431, 46);
+            this.label3.Size = new System.Drawing.Size(304, 37);
             this.label3.TabIndex = 10;
             this.label3.Text = "Menu Registro Libro";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnGregistro
+            // 
+            this.btnGregistro.BackColor = System.Drawing.Color.Transparent;
+            this.btnGregistro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGregistro.BackgroundImage")));
+            this.btnGregistro.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGregistro.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnGregistro.Location = new System.Drawing.Point(125, 289);
+            this.btnGregistro.Name = "btnGregistro";
+            this.btnGregistro.Size = new System.Drawing.Size(150, 52);
+            this.btnGregistro.TabIndex = 135;
+            this.btnGregistro.Text = "Historial";
+            this.btnGregistro.UseVisualStyleBackColor = false;
+            this.btnGregistro.Click += new System.EventHandler(this.btnGregistro_Click);
+            // 
             // Menu_Registro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::OfficeHouse.Properties.Resources.CCB38D;
-            this.ClientSize = new System.Drawing.Size(547, 611);
+            this.ClientSize = new System.Drawing.Size(410, 496);
             this.Controls.Add(this.btnGregistro);
             this.Controls.Add(this.btnconsultar);
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.btnregistro);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Menu_Registro";
             this.Text = "Menu_Registro";
+            this.Load += new System.EventHandler(this.Menu_Registro_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -148,12 +144,11 @@ namespace OfficeHouse
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnGregistro;
         private System.Windows.Forms.Button btnconsultar;
         private System.Windows.Forms.Button btncerrar;
         private System.Windows.Forms.Button btnregistro;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnGregistro;
     }
 }

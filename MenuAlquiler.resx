@@ -118,13 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnGregistro.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAJYAAADICAMAAAA9W+hXAAAABGdBTUEAALGPC/xhBQAAAANQTFRF+a0J
-        fxoPhQAAADRJREFUeF7twTEBAAAAwqD1T+1rCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE4N
-        dfgAAeuwbL8AAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btnconsultar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAJYAAADICAMAAAA9W+hXAAAABGdBTUEAALGPC/xhBQAAAANQTFRF+a0J
@@ -140,6 +133,13 @@
 </value>
   </data>
   <data name="btnregistro.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAJYAAADICAMAAAA9W+hXAAAABGdBTUEAALGPC/xhBQAAAANQTFRF+a0J
+        fxoPhQAAADRJREFUeF7twTEBAAAAwqD1T+1rCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE4N
+        dfgAAeuwbL8AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnGregistro.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAJYAAADICAMAAAA9W+hXAAAABGdBTUEAALGPC/xhBQAAAANQTFRF+a0J
         fxoPhQAAADRJREFUeF7twTEBAAAAwqD1T+1rCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE4N

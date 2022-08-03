@@ -34,9 +34,9 @@ namespace OfficeHouse
 
         private void btnGregistro_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Historial_registro frm = new Historial_registro();
-            frm.Show();
+           // this.Hide();
+           // Historial_registro frm = new Historial_registro();
+           // frm.Show();
         }
 
         private void btncerrar_Click(object sender, EventArgs e)
@@ -54,6 +54,11 @@ namespace OfficeHouse
                 Menu_Empleado frm = new Menu_Empleado();
                 frm.Show();
             }
+        }
+
+        private void Menu_Registro_Load(object sender, EventArgs e)
+        {
+            btnGregistro.Enabled = false;
         }
     }
 }

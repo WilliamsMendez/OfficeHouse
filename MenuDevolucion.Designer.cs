@@ -46,10 +46,9 @@ namespace OfficeHouse
             this.btnconsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnconsultar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnconsultar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnconsultar.Location = new System.Drawing.Point(148, 276);
-            this.btnconsultar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnconsultar.Location = new System.Drawing.Point(111, 224);
             this.btnconsultar.Name = "btnconsultar";
-            this.btnconsultar.Size = new System.Drawing.Size(200, 64);
+            this.btnconsultar.Size = new System.Drawing.Size(150, 52);
             this.btnconsultar.TabIndex = 134;
             this.btnconsultar.Text = "Consultar";
             this.btnconsultar.UseVisualStyleBackColor = false;
@@ -61,10 +60,9 @@ namespace OfficeHouse
             this.btncerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btncerrar.BackgroundImage")));
             this.btncerrar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncerrar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btncerrar.Location = new System.Drawing.Point(148, 454);
-            this.btncerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btncerrar.Location = new System.Drawing.Point(111, 369);
             this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(200, 64);
+            this.btncerrar.Size = new System.Drawing.Size(150, 52);
             this.btncerrar.TabIndex = 133;
             this.btncerrar.Text = "Volver";
             this.btncerrar.UseVisualStyleBackColor = false;
@@ -77,10 +75,9 @@ namespace OfficeHouse
             this.btnregistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnregistro.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistro.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnregistro.Location = new System.Drawing.Point(148, 182);
-            this.btnregistro.Margin = new System.Windows.Forms.Padding(4);
+            this.btnregistro.Location = new System.Drawing.Point(111, 148);
             this.btnregistro.Name = "btnregistro";
-            this.btnregistro.Size = new System.Drawing.Size(200, 64);
+            this.btnregistro.Size = new System.Drawing.Size(150, 52);
             this.btnregistro.TabIndex = 132;
             this.btnregistro.Text = "Registro";
             this.btnregistro.UseVisualStyleBackColor = false;
@@ -93,22 +90,21 @@ namespace OfficeHouse
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::OfficeHouse.Properties.Resources._0C1231;
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(-6, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(-4, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(502, 115);
+            this.panel1.Size = new System.Drawing.Size(376, 93);
             this.panel1.TabIndex = 131;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(85, 36);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(64, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(370, 46);
+            this.label3.Size = new System.Drawing.Size(262, 37);
             this.label3.TabIndex = 10;
             this.label3.Text = "Menu Devolución";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -119,10 +115,9 @@ namespace OfficeHouse
             this.btnHistorial.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHistorial.BackgroundImage")));
             this.btnHistorial.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorial.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnHistorial.Location = new System.Drawing.Point(148, 360);
-            this.btnHistorial.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHistorial.Location = new System.Drawing.Point(111, 295);
             this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(200, 64);
+            this.btnHistorial.Size = new System.Drawing.Size(150, 52);
             this.btnHistorial.TabIndex = 136;
             this.btnHistorial.Text = "Historial";
             this.btnHistorial.UseVisualStyleBackColor = false;
@@ -130,17 +125,19 @@ namespace OfficeHouse
             // 
             // MenuDevolucion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::OfficeHouse.Properties.Resources.CCB38D;
-            this.ClientSize = new System.Drawing.Size(493, 589);
+            this.ClientSize = new System.Drawing.Size(370, 479);
             this.Controls.Add(this.btnHistorial);
             this.Controls.Add(this.btnconsultar);
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.btnregistro);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MenuDevolucion";
-            this.Text = "Form1";
+            this.Text = "Menu Devolucion";
+            this.Load += new System.EventHandler(this.MenuDevolucion_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

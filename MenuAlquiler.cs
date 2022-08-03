@@ -20,7 +20,7 @@ namespace OfficeHouse
 
         private void MenuAlquiler_Load(object sender, EventArgs e)
         {
-
+            btnGregistro.Enabled = false;
         }
 
         private void btnregistro_Click(object sender, EventArgs e)
@@ -40,9 +40,9 @@ namespace OfficeHouse
 
         private void btnGregistro_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Historial_Alquiler frm = new Historial_Alquiler();
-            frm.Show();
+            //this.Hide();
+            //Historial_Alquiler frm = new Historial_Alquiler();
+            //frm.Show();
         }
 
         private void btncerrar_Click(object sender, EventArgs e)

@@ -80,11 +80,11 @@ namespace OfficeHouse
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(270, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 36);
+            this.label5.Size = new System.Drawing.Size(144, 37);
             this.label5.TabIndex = 120;
             this.label5.Text = "Usuarios";
             // 
@@ -151,6 +151,7 @@ namespace OfficeHouse
             this.nombre_usuario.Name = "nombre_usuario";
             this.nombre_usuario.Size = new System.Drawing.Size(100, 20);
             this.nombre_usuario.TabIndex = 128;
+            this.nombre_usuario.TextChanged += new System.EventHandler(this.nombre_usuario_TextChanged);
             this.nombre_usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombre_usuario_KeyPress);
             this.nombre_usuario.Validated += new System.EventHandler(this.nombre_usuario_Validated);
             // 
@@ -398,6 +399,7 @@ namespace OfficeHouse
             this.dgv_libro.Size = new System.Drawing.Size(748, 171);
             this.dgv_libro.TabIndex = 199;
             this.dgv_libro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_libro_CellClick);
+            this.dgv_libro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_libro_CellContentClick);
             // 
             // epError
             // 

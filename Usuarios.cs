@@ -443,6 +443,16 @@ namespace OfficeHouse
             }
         
         }
+
+        private void nombre_usuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_libro_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     }
 
