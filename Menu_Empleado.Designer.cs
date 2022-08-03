@@ -44,10 +44,9 @@ namespace OfficeHouse
             this.btncerrar.BackgroundImage = global::OfficeHouse.Properties.Resources.F99909;
             this.btncerrar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncerrar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btncerrar.Location = new System.Drawing.Point(143, 370);
-            this.btncerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btncerrar.Location = new System.Drawing.Point(107, 301);
             this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(200, 78);
+            this.btncerrar.Size = new System.Drawing.Size(150, 63);
             this.btncerrar.TabIndex = 125;
             this.btncerrar.Text = "Cerrar Sesión";
             this.btncerrar.UseVisualStyleBackColor = false;
@@ -59,10 +58,9 @@ namespace OfficeHouse
             this.btnalquiler.BackgroundImage = global::OfficeHouse.Properties.Resources.F99909;
             this.btnalquiler.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnalquiler.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnalquiler.Location = new System.Drawing.Point(143, 263);
-            this.btnalquiler.Margin = new System.Windows.Forms.Padding(4);
+            this.btnalquiler.Location = new System.Drawing.Point(107, 214);
             this.btnalquiler.Name = "btnalquiler";
-            this.btnalquiler.Size = new System.Drawing.Size(200, 78);
+            this.btnalquiler.Size = new System.Drawing.Size(150, 63);
             this.btnalquiler.TabIndex = 124;
             this.btnalquiler.Text = "Alquiler";
             this.btnalquiler.UseVisualStyleBackColor = false;
@@ -74,10 +72,9 @@ namespace OfficeHouse
             this.btnregistro.BackgroundImage = global::OfficeHouse.Properties.Resources.F99909;
             this.btnregistro.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistro.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnregistro.Location = new System.Drawing.Point(143, 150);
-            this.btnregistro.Margin = new System.Windows.Forms.Padding(4);
+            this.btnregistro.Location = new System.Drawing.Point(107, 122);
             this.btnregistro.Name = "btnregistro";
-            this.btnregistro.Size = new System.Drawing.Size(200, 78);
+            this.btnregistro.Size = new System.Drawing.Size(150, 63);
             this.btnregistro.TabIndex = 123;
             this.btnregistro.Text = "Registro Libro";
             this.btnregistro.UseVisualStyleBackColor = false;
@@ -91,36 +88,35 @@ namespace OfficeHouse
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(-1, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(492, 94);
+            this.panel2.Size = new System.Drawing.Size(369, 76);
             this.panel2.TabIndex = 122;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(87, 25);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(65, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(343, 46);
+            this.label3.Size = new System.Drawing.Size(249, 37);
             this.label3.TabIndex = 119;
             this.label3.Text = "Menu Empleado";
             // 
             // Menu_Empleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::OfficeHouse.Properties.Resources.CCB38D;
-            this.ClientSize = new System.Drawing.Size(486, 559);
+            this.ClientSize = new System.Drawing.Size(364, 454);
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.btnalquiler);
             this.Controls.Add(this.btnregistro);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Menu_Empleado";
-            this.Text = "Form1";
+            this.Text = "Menu Empleado";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

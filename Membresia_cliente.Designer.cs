@@ -76,11 +76,11 @@ namespace OfficeHouse
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(83, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(376, 36);
+            this.label3.Size = new System.Drawing.Size(342, 37);
             this.label3.TabIndex = 10;
             this.label3.Text = "Número de Membresia";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -143,7 +143,7 @@ namespace OfficeHouse
             this.Controls.Add(this.btnusuario);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Membresia_cliente";
-            this.Text = "Form1";
+            this.Text = "Menbresia Cliente";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epError)).EndInit();
