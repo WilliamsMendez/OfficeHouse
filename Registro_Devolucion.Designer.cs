@@ -48,9 +48,9 @@ namespace OfficeHouse
             this.estado_libro = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.titulo_devolucion = new System.Windows.Forms.ComboBox();
+            this.autor_devolucion = new System.Windows.Forms.TextBox();
             this.dgv_devolucion = new System.Windows.Forms.DataGridView();
             this.epError = new System.Windows.Forms.ErrorProvider(this.components);
-            this.autor_devolucion = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_devolucion)).BeginInit();
@@ -106,6 +106,7 @@ namespace OfficeHouse
             // 
             this.codigo_devolucion.Enabled = false;
             this.codigo_devolucion.Location = new System.Drawing.Point(211, 22);
+            this.codigo_devolucion.MaxLength = 4;
             this.codigo_devolucion.Name = "codigo_devolucion";
             this.codigo_devolucion.Size = new System.Drawing.Size(184, 27);
             this.codigo_devolucion.TabIndex = 170;
@@ -139,11 +140,11 @@ namespace OfficeHouse
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(177, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(390, 36);
+            this.label3.Size = new System.Drawing.Size(345, 37);
             this.label3.TabIndex = 119;
             this.label3.Text = "Registro de Devolución";
             // 
@@ -272,6 +273,14 @@ namespace OfficeHouse
             this.titulo_devolucion.SelectedIndexChanged += new System.EventHandler(this.titulo_devolucion_SelectedIndexChanged);
             this.titulo_devolucion.Validated += new System.EventHandler(this.titulo_devolucion_Validated);
             // 
+            // autor_devolucion
+            // 
+            this.autor_devolucion.Enabled = false;
+            this.autor_devolucion.Location = new System.Drawing.Point(211, 106);
+            this.autor_devolucion.Name = "autor_devolucion";
+            this.autor_devolucion.Size = new System.Drawing.Size(184, 27);
+            this.autor_devolucion.TabIndex = 174;
+            // 
             // dgv_devolucion
             // 
             this.dgv_devolucion.AllowUserToOrderColumns = true;
@@ -293,14 +302,6 @@ namespace OfficeHouse
             // epError
             // 
             this.epError.ContainerControl = this;
-            // 
-            // autor_devolucion
-            // 
-            this.autor_devolucion.Enabled = false;
-            this.autor_devolucion.Location = new System.Drawing.Point(211, 106);
-            this.autor_devolucion.Name = "autor_devolucion";
-            this.autor_devolucion.Size = new System.Drawing.Size(184, 27);
-            this.autor_devolucion.TabIndex = 174;
             // 
             // Registro_Devolucion
             // 

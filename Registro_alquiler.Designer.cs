@@ -71,11 +71,11 @@ namespace OfficeHouse
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(202, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(343, 36);
+            this.label3.Size = new System.Drawing.Size(295, 37);
             this.label3.TabIndex = 119;
             this.label3.Text = "Registro de Alquiler";
             // 
@@ -236,6 +236,7 @@ namespace OfficeHouse
             // cantidad_alquiler
             // 
             this.cantidad_alquiler.Location = new System.Drawing.Point(208, 210);
+            this.cantidad_alquiler.MaxLength = 6;
             this.cantidad_alquiler.Name = "cantidad_alquiler";
             this.cantidad_alquiler.Size = new System.Drawing.Size(184, 27);
             this.cantidad_alquiler.TabIndex = 213;
@@ -245,6 +246,7 @@ namespace OfficeHouse
             // codigo_alquiler
             // 
             this.codigo_alquiler.Location = new System.Drawing.Point(208, 32);
+            this.codigo_alquiler.MaxLength = 8;
             this.codigo_alquiler.Name = "codigo_alquiler";
             this.codigo_alquiler.Size = new System.Drawing.Size(184, 27);
             this.codigo_alquiler.TabIndex = 210;
@@ -255,6 +257,7 @@ namespace OfficeHouse
             // 
             this.autor_alquier.Enabled = false;
             this.autor_alquier.Location = new System.Drawing.Point(208, 117);
+            this.autor_alquier.MaxLength = 150;
             this.autor_alquier.Name = "autor_alquier";
             this.autor_alquier.Size = new System.Drawing.Size(184, 27);
             this.autor_alquier.TabIndex = 212;
