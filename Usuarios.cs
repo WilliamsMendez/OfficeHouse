@@ -355,12 +355,23 @@ namespace OfficeHouse
 
         private void apellido_usuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 162) || (e.KeyChar >= 167 && e.KeyChar <= 255))
+            if (Char.IsLetter(e.KeyChar))
             {
-                MessageBox.Show("Solo se permiten letras en el apellido", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
+                e.Handled = false;
+                
             }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled= false;
+            }
+            else {
+                MessageBox.Show("Solo se permiten letras");
+                e.Handled = true;
+            }
+            
         }
 
         private void codigo_usuario_Validated(object sender, EventArgs e)
@@ -450,6 +461,11 @@ namespace OfficeHouse
         }
 
         private void dgv_libro_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void apellido_usuario_TextChanged(object sender, EventArgs e)
         {
 
         }
