@@ -125,7 +125,7 @@ namespace OfficeHouse
             Editoriallibro.Text = dgv_libro.SelectedCells[3].Value.ToString();
             Categorialibro.Text = dgv_libro.SelectedCells[4].Value.ToString();
             preciolibro.Text = dgv_libro.SelectedCells[5].Value.ToString();
-            fechaingresolibro.Value = Convert.ToDateTime(dgv_libro.SelectedCells[6].Value.ToString());
+            fechaingresolibro.MinDate = Convert.ToDateTime(dgv_libro.SelectedCells[6].Value.ToString());
 
 
         }
