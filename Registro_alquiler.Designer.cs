@@ -236,7 +236,7 @@ namespace OfficeHouse
             // cantidad_alquiler
             // 
             this.cantidad_alquiler.Location = new System.Drawing.Point(208, 210);
-            this.cantidad_alquiler.MaxLength = 6;
+            this.cantidad_alquiler.MaxLength = 2;
             this.cantidad_alquiler.Name = "cantidad_alquiler";
             this.cantidad_alquiler.Size = new System.Drawing.Size(184, 27);
             this.cantidad_alquiler.TabIndex = 213;

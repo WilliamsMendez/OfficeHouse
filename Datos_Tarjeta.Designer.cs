@@ -108,21 +108,21 @@ namespace OfficeHouse
             // 
             // fecha_vencimiento_tarjeta
             // 
-            this.fecha_vencimiento_tarjeta.Location = new System.Drawing.Point(209, 174);
+            this.fecha_vencimiento_tarjeta.Location = new System.Drawing.Point(217, 172);
             this.fecha_vencimiento_tarjeta.Name = "fecha_vencimiento_tarjeta";
             this.fecha_vencimiento_tarjeta.Size = new System.Drawing.Size(199, 20);
             this.fecha_vencimiento_tarjeta.TabIndex = 159;
             // 
             // numero_atras_tarjeta
             // 
-            this.numero_atras_tarjeta.Location = new System.Drawing.Point(209, 214);
+            this.numero_atras_tarjeta.Location = new System.Drawing.Point(217, 213);
             this.numero_atras_tarjeta.Name = "numero_atras_tarjeta";
             this.numero_atras_tarjeta.Size = new System.Drawing.Size(93, 20);
             this.numero_atras_tarjeta.TabIndex = 152;
             // 
             // nombre_propietario_tarjeta
             // 
-            this.nombre_propietario_tarjeta.Location = new System.Drawing.Point(209, 137);
+            this.nombre_propietario_tarjeta.Location = new System.Drawing.Point(217, 136);
             this.nombre_propietario_tarjeta.Name = "nombre_propietario_tarjeta";
             this.nombre_propietario_tarjeta.Size = new System.Drawing.Size(276, 20);
             this.nombre_propietario_tarjeta.TabIndex = 150;
@@ -173,7 +173,7 @@ namespace OfficeHouse
             // 
             // numero_tarjeta
             // 
-            this.numero_tarjeta.Location = new System.Drawing.Point(209, 101);
+            this.numero_tarjeta.Location = new System.Drawing.Point(217, 101);
             this.numero_tarjeta.Name = "numero_tarjeta";
             this.numero_tarjeta.Size = new System.Drawing.Size(276, 20);
             this.numero_tarjeta.TabIndex = 144;
@@ -207,7 +207,7 @@ namespace OfficeHouse
             this.Controls.Add(this.label3);
             this.Controls.Add(this.numero_tarjeta);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Datos_Tarjeta";
             this.Text = "Datos_Tarjeta";
             this.panel2.ResumeLayout(false);

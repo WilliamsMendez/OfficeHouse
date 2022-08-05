@@ -216,6 +216,7 @@ namespace OfficeHouse
             this.clave_usuario.BackColor = System.Drawing.SystemColors.Control;
             this.clave_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.clave_usuario.Location = new System.Drawing.Point(109, 188);
+            this.clave_usuario.MaxLength = 13;
             this.clave_usuario.Name = "clave_usuario";
             this.clave_usuario.Size = new System.Drawing.Size(100, 20);
             this.clave_usuario.TabIndex = 135;

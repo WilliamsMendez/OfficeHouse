@@ -54,7 +54,7 @@ namespace OfficeHouse
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(-2, -6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(789, 89);
+            this.panel2.Size = new System.Drawing.Size(790, 89);
             this.panel2.TabIndex = 166;
             // 
             // label3
@@ -76,7 +76,7 @@ namespace OfficeHouse
             this.radioButton3.AutoSize = true;
             this.radioButton3.BackColor = System.Drawing.Color.Transparent;
             this.radioButton3.Location = new System.Drawing.Point(588, 118);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(50, 17);
             this.radioButton3.TabIndex = 219;
@@ -90,7 +90,7 @@ namespace OfficeHouse
             this.radioButton2.AutoSize = true;
             this.radioButton2.BackColor = System.Drawing.Color.Transparent;
             this.radioButton2.Location = new System.Drawing.Point(531, 118);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(53, 17);
             this.radioButton2.TabIndex = 218;
@@ -105,7 +105,7 @@ namespace OfficeHouse
             this.radioButton1.BackColor = System.Drawing.Color.Transparent;
             this.radioButton1.ForeColor = System.Drawing.Color.Black;
             this.radioButton1.Location = new System.Drawing.Point(469, 118);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(58, 17);
             this.radioButton1.TabIndex = 217;
@@ -117,6 +117,7 @@ namespace OfficeHouse
             // Buscar
             // 
             this.Buscar.Location = new System.Drawing.Point(267, 118);
+            this.Buscar.MaxLength = 255;
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(184, 20);
             this.Buscar.TabIndex = 216;
@@ -196,7 +197,7 @@ namespace OfficeHouse
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::OfficeHouse.Properties.Resources.CCB38D;
-            this.ClientSize = new System.Drawing.Size(786, 617);
+            this.ClientSize = new System.Drawing.Size(787, 584);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -207,7 +208,7 @@ namespace OfficeHouse
             this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.btnatras);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Consulta_Aquiler";
             this.Text = "Consulta_Aquiler";
             this.Load += new System.EventHandler(this.Consulta_Aquiler_Load);

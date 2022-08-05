@@ -103,7 +103,7 @@ namespace OfficeHouse
             this.radioButton3.AutoSize = true;
             this.radioButton3.BackColor = System.Drawing.Color.Transparent;
             this.radioButton3.Location = new System.Drawing.Point(529, 141);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(50, 17);
             this.radioButton3.TabIndex = 224;
@@ -116,7 +116,7 @@ namespace OfficeHouse
             this.radioButton2.AutoSize = true;
             this.radioButton2.BackColor = System.Drawing.Color.Transparent;
             this.radioButton2.Location = new System.Drawing.Point(472, 140);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(53, 17);
             this.radioButton2.TabIndex = 223;
@@ -130,7 +130,7 @@ namespace OfficeHouse
             this.radioButton1.BackColor = System.Drawing.Color.Transparent;
             this.radioButton1.ForeColor = System.Drawing.Color.Black;
             this.radioButton1.Location = new System.Drawing.Point(410, 141);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(58, 17);
             this.radioButton1.TabIndex = 222;
@@ -141,6 +141,7 @@ namespace OfficeHouse
             // Buscar
             // 
             this.Buscar.Location = new System.Drawing.Point(209, 140);
+            this.Buscar.MaxLength = 255;
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(184, 20);
             this.Buscar.TabIndex = 221;
@@ -199,7 +200,7 @@ namespace OfficeHouse
             this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.btnatras);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Consulta_Devolucion";
             this.Text = "Consultas Devolcion";
             this.Load += new System.EventHandler(this.Consulta_Devolucion_Load);

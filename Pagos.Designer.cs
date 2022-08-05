@@ -263,7 +263,8 @@ namespace OfficeHouse
             // txt_Num_Membresia
             // 
             this.txt_Num_Membresia.Enabled = false;
-            this.txt_Num_Membresia.Location = new System.Drawing.Point(178, 88);
+            this.txt_Num_Membresia.Location = new System.Drawing.Point(197, 86);
+            this.txt_Num_Membresia.MaxLength = 13;
             this.txt_Num_Membresia.Name = "txt_Num_Membresia";
             this.txt_Num_Membresia.Size = new System.Drawing.Size(211, 20);
             this.txt_Num_Membresia.TabIndex = 168;
@@ -311,7 +312,7 @@ namespace OfficeHouse
             this.Controls.Add(this.txt_Num_Membresia);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Pagos";
             this.Text = "v";
             this.Load += new System.EventHandler(this.Pagos_Load);

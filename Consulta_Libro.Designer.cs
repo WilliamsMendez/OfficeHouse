@@ -113,6 +113,7 @@ namespace OfficeHouse
             // Buscar
             // 
             this.Buscar.Location = new System.Drawing.Point(232, 143);
+            this.Buscar.MaxLength = 255;
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(184, 20);
             this.Buscar.TabIndex = 210;
@@ -188,7 +189,7 @@ namespace OfficeHouse
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::OfficeHouse.Properties.Resources.CCB38D;
-            this.ClientSize = new System.Drawing.Size(824, 634);
+            this.ClientSize = new System.Drawing.Size(824, 609);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);

@@ -277,6 +277,7 @@ namespace OfficeHouse
             // 
             this.autor_devolucion.Enabled = false;
             this.autor_devolucion.Location = new System.Drawing.Point(211, 106);
+            this.autor_devolucion.MaxLength = 255;
             this.autor_devolucion.Name = "autor_devolucion";
             this.autor_devolucion.Size = new System.Drawing.Size(184, 27);
             this.autor_devolucion.TabIndex = 174;
